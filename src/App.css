@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+}
+
+#ARLogo {
+    width: 50%;
+}
+
+#homeText {
+    font-family: 'Courgette', cursive;
+}
+
+/* #background {
+    background-image: url('./images/iphone3.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+} */
+
+/* @media only screen and (max-width: 600px) {
+    #homeText{
+        font-size: x-small
+    }
+} */
