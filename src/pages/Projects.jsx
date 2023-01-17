@@ -1,83 +1,76 @@
 import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import ListSubheader from '@mui/material/ListSubheader';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+import Grid from '@mui/material/Grid';
+import CardMedia from '@mui/material/CardMedia';
+import { CardContent, CardActionArea } from '@mui/material';
+import {Routes, Route, useNavigate} from 'react-router-dom'
 
 const Projects = () => {
-  // const [open, setOpen] = useState(false);
 
-  // const handleClick = () => {
-  //   setOpen(!open);
-  // };
+  const navigate = useNavigate();
 
-  // return (
-  //   <List
-  //     sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
-  //     component="nav"
-  //     aria-labelledby="nested-list-subheader"
-  //     subheader={
-  //       <ListSubheader component="div" id="nested-list-subheader">
-  //         Predictive Analytics
-  //       </ListSubheader>
-  //     }
-  //   >
-  //     <ListItemButton onClick={handleClick}>
-  //       <ListItemIcon>
-  //         <InboxIcon />
-  //       </ListItemIcon>
-  //       <ListItemText primary="Inbox" />
-  //       {open ? <ExpandLess /> : <ExpandMore />}
-  //     </ListItemButton>
-  //     <Collapse in={open} timeout="auto" unmountOnExit>
-  //       <List component="div" disablePadding>
-  //         <ListItemButton sx={{ pl: 4 }}>
-  //           <ListItemIcon>
-  //             <StarBorder />
-  //           </ListItemIcon>
-  //           <ListItemText primary="Starred" />
-  //         </ListItemButton>
-  //       </List>
-  //     </Collapse>
-  //   </List>
-  // );
+  const projects = [
+    {
+      title: 'BCIT WayFinding',
+      description: 'Prototype navigation app for the BCIT Burnaby campus. Get directions to buildings from current location.',
+      image: 'https://i.imgur.com/vKBGAwz.png',
+      imgTitle: 'Navigation App',
+      path: '/projects/BCITWayFinding/'
+    },
+    {
+      title: 'SotBy',
+      description: 'Scheduling and Resource management application developed for the BCIT Automotive Department.',
+      image: 'https://i.imgur.com/2rfRttK.jpeg',
+      imgTitle: 'SotBy',
+      path: '/projects/SotBy/'
+    },
+    {
+      title: 'Hangado',
+      description: 'A web application that allows users to create and join hangouts with friends.',
+      image: 'https://i.imgur.com/OlLqcwS.png',
+      imgTitle: 'Hangado',
+      path: '/projects/Hangado/'
+    },
+    {
+      title: 'Predictive Analytics',
+      description: 'A web application that allows users to create and join hangouts with friends.',
+      image: 'https://i.imgur.com/OrldVkl.png',
+      imgTitle: 'Predictive Analytics',
+      path: '/projects/PredictiveAnalytics/'
+    }
+  ]
 
   return (
-    <Box
-      display='flex'
-      maxWidth='1040px'
-    >
-      <Box
-        display='flex'
-        width='100%'
-        height='100%'
-        justifyContent='space-between'
-        flexWrap='wrap'
-        alignContent='center'
-        flex='1'
-      >
-        <Card
-          sx={{width: '50%'}}>
-          KEKEKE
-        </Card>
-        <Card>
-          KEKEKE
-        </Card>
-        <Card>
-          KEKEKE
-        </Card>
-      </Box>
-    </Box>
+    <Box sx={{ flexGrow: 1 }} id='project-gallery'>
+    <Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+      {projects.map((project, index) => {
+        return (
+          <Grid item xs={12} md={6} display='flex' key={index}>
+            <Card sx={{display: 'flex', justifyContent: 'space-between', 
+                      flexDirection: 'column', ':hover': { boxShadow: 20}}}>
+              <CardActionArea onClick={() => {navigate(project.path)}}>
+              {/* <CardActionArea> */}
+                <CardContent>
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
+                  <b>View Preview {String.fromCharCode(8594)}</b>
+                </CardContent>
+                <CardMedia
+                  id='project-gallery-item'
+                  height="329"
+                  component="img"
+                  sx={{objectFit: 'contain'}}
+                  image={project.image}
+                  title={project.imgTitle}
+                />
+              </CardActionArea>
+            </Card>
+          </Grid>
+        )
+      })}
+    </Grid>
+  </Box>
   )
 };
 

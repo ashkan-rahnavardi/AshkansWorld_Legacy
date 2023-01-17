@@ -10,6 +10,10 @@ body {
     font-family: 'Courgette', cursive;
 }
 
+/* #project-gallery:has(div:hover) div:not(:hover) {
+    scale: .8;
+} */
+
 /* #background {
     background-image: url('./images/iphone3.png');
     background-size: cover;

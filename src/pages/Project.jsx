@@ -15,7 +15,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Toolbar from '@mui/material/Toolbar';
-import {Routes, Route, useNavigate} from 'react-router-dom'
+import {Routes, Route, useNavigate, useParams} from 'react-router-dom'
 
 
 
@@ -57,7 +57,9 @@ export default function FullWidthTabs({isMobile}) {
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
 
-  // const [isMobile, setMobile] = useState(mobile);
+  const { projectId } = useParams();
+
+  console.log(projectId);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -88,9 +90,9 @@ export default function FullWidthTabs({isMobile}) {
             aria-label="full width tabs example"
             sx={{ width: '100%' }}
           >
-            <Tab label="Home" {...a11yProps(0)}/>
-            <Tab label="Projects" {...a11yProps(1)}/>
-            <Tab label="Resume" {...a11yProps(2)}/>
+            <Tab label="Overview" {...a11yProps(0)}/>
+            <Tab label="Research" {...a11yProps(1)}/>
+            <Tab label="Outcome" {...a11yProps(2)}/>
           </Tabs>
         </Toolbar>
       </AppBar>
@@ -100,13 +102,13 @@ export default function FullWidthTabs({isMobile}) {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-          <Home mobile={isMobile} />
+          <h1>This is a description about it</h1>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          <Projects />
+        <h1>This is research</h1>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          <Resume />
+        <h1>This is outcome</h1>
         </TabPanel>
       </SwipeableViews>
     </Box>
