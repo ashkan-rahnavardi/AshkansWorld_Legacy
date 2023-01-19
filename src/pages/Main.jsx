@@ -8,8 +8,12 @@ import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../Layout.jsx';
+import Home from './Landing/Home.jsx';
+import Projects from './Landing/Projects.jsx';
+import Resume from './Landing/Resume.jsx';
 import TabBar from './Layout/TabBar.jsx';
 import TabView from './Layout/TabView.jsx';
+import Overview from './Project/Overview.jsx';
 
 const data = require('../data.json');
 
@@ -17,6 +21,21 @@ export default function Main({ isMobile, content }) {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	let { id } = useParams();
+
+	let views = [];
+	const info = data.filter((item) => item.name === id)[0];
+
+	console.log(info);
+
+	if (info) {
+		views = [
+			<Overview info={info.overview} />,
+			<Overview info={info.overview} />,
+			<Overview info={info.overview} />,
+		];
+	} else {
+		views = [<Home />, <Projects />, <Resume />];
+	}
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -43,7 +62,7 @@ export default function Main({ isMobile, content }) {
 			/>
 			<TabView
 				isMobile={isMobile}
-				content={content}
+				content={views}
 				value={value}
 				handleChangeIndex={handleChangeIndex}
 				theme={theme}

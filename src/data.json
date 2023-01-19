@@ -1,10 +1,16 @@
 [
 	{
 		"name": "SotBy",
-		"challenge": "Time Scheduling app for students and faculty"
+		"overview": {
+			"Context": "The faculty of BCIT's Automotive Department were using a shared excel file to manage their schedules and resources. Due to the nature of the excel file, it was difficult to manage and update.",
+			"Objective": "The goal of this project was to create a web application that would allow the faculty to manage their schedules and resources in a more efficient manner."
+		}
 	},
 	{
 		"name": "BCITWayFinding",
-		"challenge": "Wayfinding app for BCIT"
+		"overview": {
+			"Context": "Wayfinding app for BCIT",
+			"Objective": "To create a prototype mobile app that would allow students to navigate the BCIT campus more efficiently. The app would also allow students to find the nearest washroom, food court, and other amenities."
+		}
 	}
 ]

@@ -4,16 +4,24 @@ import { useParams } from 'react-router-dom';
 
 const data = require('../../data.json');
 
-export default function Overview() {
+export default function Overview({ info }) {
 	const { id } = useParams();
-	const info = data.filter((item) => item.name === id);
-
-	console.log('info', info);
 
 	return (
+		<>
+			{Object.keys(info).map((key) => {
+				console.log(info.key);
+				return <TextBox title={key} info={info} />;
+			})}
+		</>
+	);
+}
+
+function TextBox({ title, info }) {
+	return (
 		<div className="card">
-			<h2>Challenge & Goal</h2>
-			<p>Project ID: {id}</p>
+			<h2>{title}</h2>
+			<p>{info[title]}</p>
 		</div>
 	);
 }

@@ -66,7 +66,7 @@ export default function TabView({
 				onChangeIndex={handleChangeIndex}
 				enableMouseEvents
 			>
-				{content.components.map((panel, index) => {
+				{content.map((panel, index) => {
 					return (
 						<TabPanel
 							value={value}
