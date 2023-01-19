@@ -11,6 +11,8 @@ import Layout from '../Layout.jsx';
 import TabBar from './Layout/TabBar.jsx';
 import TabView from './Layout/TabView.jsx';
 
+const data = require('../data.json');
+
 export default function Main({ isMobile, content }) {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);

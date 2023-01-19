@@ -2,58 +2,18 @@ import Box from '@mui/material/Box';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const UserStories = () => {
-	// let { projectId } = useParams();
-	// console.log(projectId);
+const data = require('../../data.json');
 
-	const [users, setUsers] = useState([
-		{
-			image:
-				'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-			name: 'John Smith',
-			age: 30,
-			occupation: 'Software Developer',
-			bulletPoints: [
-				'Developed a new feature for the company website',
-				'Spearheaded a team to improve website performance',
-				'Implemented a new way to handle customer complaints',
-			],
-		},
-		// more users here
-	]);
+export default function Overview() {
+	const { id } = useParams();
+	const info = data.filter((item) => item.name === id);
 
-	const UserCard = ({ image, name, age, occupation, bulletPoints }) => {
-		return (
-			<div className="user-card">
-				<img src={image} alt={name} className="user-image" />
-				<div className="user-info">
-					<p>Name: {name}</p>
-					<p>Age: {age}</p>
-					<p>Occupation: {occupation}</p>
-				</div>
-				<ul className="bullet-points">
-					{bulletPoints.map((point, index) => (
-						<li key={index}>{point}</li>
-					))}
-				</ul>
-			</div>
-		);
-	};
+	console.log('info', info);
 
 	return (
-		<>
-			{users.map((user, index) => (
-				<UserCard
-					key={index}
-					image={user.image}
-					name={user.name}
-					age={user.age}
-					occupation={user.occupation}
-					bulletPoints={user.bulletPoints}
-				/>
-			))}
-		</>
+		<div className="card">
+			<h2>Challenge & Goal</h2>
+			<p>Project ID: {id}</p>
+		</div>
 	);
-};
-
-export default UserStories;
+}
