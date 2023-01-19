@@ -21,22 +21,6 @@ import Project from './pages/Project.jsx';
 import Overview from './pages/Project/Overview.jsx';
 
 export default function App({ isMobile }) {
-	let { id } = useParams();
-	console.log(id);
-
-	// let matches = useMatches();
-
-	// useEffect(() => {
-	// 	console.log(matches);
-	// }, [matches]);
-
-	let location = useLocation();
-
-	useEffect(() => {
-		// console.log(location);
-		console.log(id);
-	}, [id]);
-
 	const pages = {
 		landing: {
 			tabLabels: ['Home', 'Projects', 'About'],
