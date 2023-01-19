@@ -1,13 +1,13 @@
 body {
-    margin: 0;
+	margin: 0;
 }
 
 #ARLogo {
-    width: 50%;
+	width: 50%;
 }
 
 #homeText {
-    font-family: 'Courgette', cursive;
+	font-family: 'Courgette', cursive;
 }
 
 /* #project-gallery:has(div:hover) div:not(:hover) {
@@ -22,8 +22,16 @@ body {
     width: 100%;
 } */
 
-/* @media only screen and (max-width: 600px) {
-    #homeText{
-        font-size: x-small
-    }
-} */
+.logo {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+	#homeText {
+		font-size: x-small;
+	}
+	.logo {
+		width: 20vw;
+	}
+}
