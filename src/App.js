@@ -21,14 +21,11 @@ import Project from './pages/Project.jsx';
 import Overview from './pages/Project/Overview.jsx';
 
 export default function App({ isMobile }) {
-	let { id } = useParams();
-	console.log(id);
+	// let location = useLocation();
 
-	let location = useLocation();
-
-	useEffect(() => {
-		console.log(location);
-	}, [location]);
+	// useEffect(() => {
+	// 	console.log(location);
+	// }, [location]);
 
 	const pages = {
 		landing: {

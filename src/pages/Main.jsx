@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '../Layout.jsx';
 import TabBar from './Layout/TabBar.jsx';
@@ -13,6 +14,7 @@ import TabView from './Layout/TabView.jsx';
 export default function Main({ isMobile, content }) {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
+	let { id } = useParams();
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -22,8 +24,10 @@ export default function Main({ isMobile, content }) {
 		setValue(index);
 	};
 
-	let { id } = useParams();
-	console.log(id);
+	useEffect(() => {
+		console.log('id', id);
+		setValue(0);
+	}, [id]);
 
 	return (
 		<>
