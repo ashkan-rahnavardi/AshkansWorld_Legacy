@@ -9,8 +9,8 @@ import {
 	Route,
 	Routes,
 	useLocation,
-	useParams,
 	useMatches,
+	useParams,
 } from 'react-router-dom';
 import Layout from './Layout.jsx';
 import Home from './pages/Landing/Home.jsx';
@@ -24,18 +24,11 @@ export default function App({ isMobile }) {
 	let { id } = useParams();
 	console.log(id);
 
-	// let matches = useMatches();
-
-	// useEffect(() => {
-	// 	console.log(matches);
-	// }, [matches]);
-
 	let location = useLocation();
 
 	useEffect(() => {
-		// console.log(location);
-		console.log(id);
-	}, [id]);
+		console.log(location);
+	}, [location]);
 
 	const pages = {
 		landing: {
