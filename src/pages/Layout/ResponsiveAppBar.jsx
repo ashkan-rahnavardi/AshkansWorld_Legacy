@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Home from './Landing/Home.jsx';
-import Projects from './Landing/Projects.jsx';
-import Resume from './Landing/Resume.jsx';
+import Home from '../Landing/Home.jsx';
+import Projects from '../Landing/Projects.jsx';
+import Resume from '../Landing/Resume.jsx';
 // import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -53,19 +53,15 @@ function a11yProps(index) {
 	};
 }
 
-export default function ResponsiveAppBar({ isMobile, content }) {
-	const theme = useTheme();
-	const [value, setValue] = useState(0);
-	const navigate = useNavigate();
-
-	const handleChange = (event, newValue) => {
-		setValue(newValue);
-	};
-
-	const handleChangeIndex = (index) => {
-		setValue(index);
-	};
-
+export default function ResponsiveAppBar({
+	isMobile,
+	tabs,
+	content,
+	handleChange,
+	value,
+	theme,
+	handleChangeIndex,
+}) {
 	const AR_logo =
 		'https://see.fontimg.com/api/renderfont4/w1OB8/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/QVI/millenia-personal-use.png';
 
@@ -101,7 +97,7 @@ export default function ResponsiveAppBar({ isMobile, content }) {
 							width: '100%',
 						}}
 					>
-						{content.tabLabels.map((label, index) => {
+						{tabs.map((label, index) => {
 							return (
 								<Tab
 									label={label}
@@ -121,7 +117,7 @@ export default function ResponsiveAppBar({ isMobile, content }) {
 				onChangeIndex={handleChangeIndex}
 				enableMouseEvents
 			>
-				{content.components.map((panel, index) => {
+				{content.map((panel, index) => {
 					return (
 						<TabPanel
 							value={value}

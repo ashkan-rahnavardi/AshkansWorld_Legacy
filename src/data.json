@@ -1,16 +1,30 @@
 [
 	{
 		"name": "SotBy",
-		"overview": {
+		"Overview": {
 			"Context": "The faculty of BCIT's Automotive Department were using a shared excel file to manage their schedules and resources. Due to the nature of the excel file, it was difficult to manage and update.",
 			"Objective": "The goal of this project was to create a web application that would allow the faculty to manage their schedules and resources in a more efficient manner."
+		},
+		"Research & Development": {
+			"Research": "The first step of this project was to conduct research on the current scheduling system. I interviewed the faculty to understand their needs and pain points. I also conducted a competitive analysis to see what other schools were doing.",
+			"Development": "I used the research to create a prototype of the web application. I used the prototype to test the application with the faculty. I also used the prototype to conduct a usability test with the faculty."
+		},
+		"Final Design": {
+			"Design": "The final design of the web application was created using Adobe XD. I used the prototype to test the application with the faculty. I also used the prototype to conduct a usability test with the faculty."
 		}
 	},
 	{
 		"name": "BCITWayFinding",
-		"overview": {
+		"Overview": {
 			"Context": "Wayfinding app for BCIT",
 			"Objective": "To create a prototype mobile app that would allow students to navigate the BCIT campus more efficiently. The app would also allow students to find the nearest washroom, food court, and other amenities."
+		},
+		"Research & Development": {
+			"Research": "The first step of this project was to conduct research on the current wayfinding system. I interviewed students to understand their needs and pain points. I also conducted a competitive analysis to see what other schools were doing.",
+			"Development": "I used the research to create a prototype of the mobile app. I used the prototype to test the app with students. I also used the prototype to conduct a usability test with students."
+		},
+		"Final Design": {
+			"Design": "The final design of the mobile app was created using Adobe XD. I used the prototype to test the app with students. I also used the prototype to conduct a usability test with students."
 		}
 	}
 ]
