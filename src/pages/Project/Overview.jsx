@@ -13,7 +13,7 @@ export default function Overview({ info, name }) {
 }
 
 function TextBox({ title, info, name }) {
-	if (info[title].image) {
+	if (info[title].horizontal) {
 		return (
 			<>
 				<Grid item xs={12} md={6}>
@@ -33,6 +33,7 @@ function TextBox({ title, info, name }) {
 					<h2>{title}</h2>
 					<p>{info[title].text}</p>
 					<p>{info[title].text2}</p>
+					<img src={info[title].image} style={{ maxWidth: '100%' }}></img>
 				</Grid>
 			</>
 		);
