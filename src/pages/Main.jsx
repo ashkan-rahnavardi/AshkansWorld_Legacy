@@ -13,6 +13,7 @@ import ResponsiveAppBar from './Layout/ResponsiveAppBar.jsx';
 import TabBar from './Layout/TabBar.jsx';
 import TabView from './Layout/TabView.jsx';
 import Overview from './Project/Overview.jsx';
+import RND from './Project/ResearchDevelopment.jsx';
 
 const data = require('../data.json');
 
@@ -23,17 +24,18 @@ export default function Main({ isMobile, content }) {
 
 	let views = [<Home />, <Projects />, <Resume />];
 	let tabs = ['Home', 'Projects', 'Resume'];
-	const page = data.filter((item) => item.name === id)[0];
+	let name = '';
+	const page = data.filter((item) => item.name[0] === id)[0];
 
 	if (page) {
 		tabs = Object.keys(page);
 		tabs.shift();
 
-		console.log(tabs);
+		name = page.name[1];
 
 		views = [
-			<Overview info={page[tabs[0]]} />,
-			<Overview info={page[tabs[1]]} />,
+			<Overview info={page[tabs[0]]} name={name} />,
+			<RND info={page[tabs[1]]} />,
 			<Overview info={page[tabs[2]]} />,
 		];
 	}
@@ -61,21 +63,6 @@ export default function Main({ isMobile, content }) {
 				handleChangeIndex={handleChangeIndex}
 				handleChange={handleChange}
 			/>
-			{/* <TabBar
-				isMobile={isMobile}
-				content={content}
-				value={value}
-				handleChangeIndex={handleChangeIndex}
-				handleChange={handleChange}
-				theme={theme}
-			/>
-			<TabView
-				isMobile={isMobile}
-				content={views}
-				value={value}
-				handleChangeIndex={handleChangeIndex}
-				theme={theme}
-			/> */}
 		</>
 	);
 }
