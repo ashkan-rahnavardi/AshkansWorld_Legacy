@@ -2,33 +2,58 @@
 	{
 		"name": ["SotBy", "SotBy"],
 		"Overview": {
-			"Context & Objective": {
-				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage their schedules and resources. Due to the nature of the excel file, it was difficult to manage and update.",
-				"text2": "The goal of this project was to create a web application that would allow the faculty to manage their schedules and resources in a more efficient manner.",
-				"image": "https://i.imgur.com/fUqPRHb.png"
+			"Context": {
+				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage vacations, resources and schedules, which led to a lof of confusion and inefficiency.",
+				"text2": "Only one person could edit the file at a time, and there was no way to track changes. Due to the lack of error control, if an error was made in the file it would be difficult to find and fix ",
+				"image": "https://i.imgur.com/fUqPRHb.png",
+				"horizontal": true
+			},
+			"Scope": {
+				"text": "This project was going to eventually replace the old system, and would be used by the faculty to manage their schedules and resources.",
+				"text2": "I was apart of the second team to work on this project. The first team had developed a semi-functional backend which had most of the functionality required for the project. My team was given a 4 week sprint to develop a userfriendly frontend for the application."
 			},
 			"Objective": {
-				"text": "The goal of this project was to create a web application that would allow the faculty to manage their schedules and resources in a more efficient manner."
-			},
-			"Subjective": {
-				"text": "The goal of this project was to create a web application that would allow the faculty to manage their schedules and resources in a more efficient manner."
+				"text": "My teams objective was to develop a user friendly frontend for the application, as well as implementing a secure login system for various account types.",
+				"text2": "Admin account types would be able to edit the schedule, resources and vacations of all users. Faculty account types would be able to edit their own schedule, resources and vacations."
 			}
 		},
 		"Research & Development": {
 			"Technologies used": [
 				[
-					"React.js",
-					"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"
+					"Node JS",
+					"https://e7.pngegg.com/pngimages/540/810/png-clipart-node-js-javascript-npm-computer-icons-web-application-others-miscellaneous-text.png"
 				],
 				[
-					"React.js",
+					"Express JS",
+					"https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png"
+				],
+				[
+					"Socket.IO",
+					"https://e7.pngegg.com/pngimages/307/948/png-clipart-socket-io-node-js-javascript-network-socket-websocket-electrical-cable-angle-triangle.png"
+				],
+				[
+					"PostgreSQL",
+					"https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png"
+				],
+				["Material Ui", "https://mui.com/static/logo.png"],
+				[
+					"React",
 					"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207"
 				]
 			],
-			"Development": "I used the research to create a prototype of the mobile app. I used the prototype to test the app with students. I also used the prototype to conduct a usability test with students."
+			"UI": {
+				"title": "UI/UX",
+				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps. The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
+				"image": "https://i.imgur.com/sG6fEEV.png"
+			},
+			"Challenge": {
+				"title": "Challenge",
+				"text": "The biggest challenge I faced was the lack of a database to store the data. I had to create a database from scratch using Google Sheets. I also had to create a script to pull the data from the database and convert it into a JSON file. This was a challenge because I had to learn how to use Google Sheets and Google Apps Script to create the database and script. I also had to learn how to use the Google Maps API to pull the data from the JSON file and display it on the map.",
+				"image": "https://i.imgur.com/4Z7ZQ2M.png"
+			}
 		},
 		"Final Design": {
-			"Design": "The final design of the web application was created using Adobe XD. I used the prototype to test the application with the faculty. I also used the prototype to conduct a usability test with the faculty."
+			"Design": "The final design of the mobile app was created using Adobe XD. I used the prototype to test the app with students. I also used the prototype to conduct a usability test with students."
 		}
 	},
 	{
@@ -37,10 +62,11 @@
 			"Context": {
 				"text": "New students and faculty were having difficulty navigating the BCIT campus. The only resource available to them was a downloadable PDF map available on the BCIT website.",
 				"text2": "Google maps does not work for foot paths on campus, so students and faculty would have to go back and forth between google maps and the PDF map.",
-				"image": "https://i.imgur.com/F3VrMws.png"
+				"image": "https://i.imgur.com/F3VrMws.png",
+				"horizontal": true
 			},
 			"Scope": {
-				"text": "This was an academic project during my last semester at BCIT. I was working with a team of 2 other students, and we were given 3 weeks to complete the project.",
+				"text": "This was an academic project during my last semester at BCIT. I was working with a team of 2 other students, and we were given 3 weeks to develop the project from the ground up.",
 				"text2": "Due to the limited resources and time, we decided to not include building interiors, and to instead focus on exterior foot paths and amenities."
 			},
 			"Objective": {
