@@ -30,6 +30,7 @@ body {
 	border-radius: 25px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	max-width: 100%;
+	max-height: 30vh;
 }
 
 .icon {
@@ -51,19 +52,35 @@ body {
 	position: relative;
 }
 
+.user-points {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-left: 1rem;
+}
+
+.bullet-points {
+	margin: 0;
+}
+
+.user-points h4 {
+	margin: 0;
+}
+
 .rnd-text {
 	background-color: black;
 	color: white;
 }
 
 .user-info {
+	font-size: 70%;
 	border-radius: 25px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: whitesmoke;
 	position: absolute;
-	top: 92%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	top: 75%;
+	left: 10%;
+	width: 80%;
 }
 
 .logo {

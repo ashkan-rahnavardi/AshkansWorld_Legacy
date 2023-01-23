@@ -12,6 +12,7 @@ import Resume from './Landing/Resume.jsx';
 import ResponsiveAppBar from './Layout/ResponsiveAppBar.jsx';
 import TabBar from './Layout/TabBar.jsx';
 import TabView from './Layout/TabView.jsx';
+import FinalDesign from './Project/FinalDesign.jsx';
 import Overview from './Project/Overview.jsx';
 import RND from './Project/ResearchDevelopment.jsx';
 
@@ -36,7 +37,7 @@ export default function Main({ isMobile, content }) {
 		views = [
 			<Overview info={page[tabs[0]]} name={name} />,
 			<RND info={page[tabs[1]]} />,
-			<Overview info={page[tabs[2]]} />,
+			<FinalDesign info={page[tabs[2]]} />,
 		];
 	}
 

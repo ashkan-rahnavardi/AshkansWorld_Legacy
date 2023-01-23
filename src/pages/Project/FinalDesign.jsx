@@ -1,52 +1,33 @@
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
-import UserCard from './UserCard';
 
-const UserStories = () => {
-	const [users, setUsers] = useState([
-		{
-			image: 'path/to/user1.jpg',
-			name: 'John Smith',
-			age: 30,
-			occupation: 'Software Developer',
-			bulletPoints: [
-				'Developed a new feature for the company website',
-				'Spearheaded a team to improve website performance',
-				'Implemented a new way to handle customer complaints',
-			],
-		},
-		// more users here
-	]);
-
-	const UserCard = ({ image, name, age, occupation, bulletPoints }) => {
-		return (
-			<div>
-				<img src={image} alt={name} />
-				<p>Name: {name}</p>
-				<p>Age: {age}</p>
-				<p>Occupation: {occupation}</p>
-				<ul>
-					{bulletPoints.map((point, index) => (
-						<li key={index}>{point}</li>
-					))}
-				</ul>
-			</div>
-		);
-	};
-
+export default function FinalDesign({ info }) {
 	return (
-		<div>
-			{users.map((user, index) => (
-				<UserCard
-					key={index}
-					image={user.image}
-					name={user.name}
-					age={user.age}
-					occupation={user.occupation}
-					bulletPoints={user.bulletPoints}
-				/>
-			))}
-		</div>
+		<Box
+			sx={{
+				flexGrow: 1,
+			}}
+			id="project-gallery"
+		>
+			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+				<UIUX info={info['UI']} className="card" />
+			</Grid>
+		</Box>
 	);
-};
+}
 
-export default UserStories;
+function UIUX({ info, name }) {
+	return (
+		<>
+			<Grid item xs={12} md={6}>
+				<h2>{info.title}</h2>
+				<p>{info.text}</p>
+				<p>{info.text2}</p>
+			</Grid>
+			<Grid item xs={12} md={6}>
+				<img src={info.image} style={{ maxWidth: '100%' }}></img>
+			</Grid>
+		</>
+	);
+}

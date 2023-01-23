@@ -2,9 +2,8 @@ import { faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import { maxHeight } from '@mui/system';
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import UserStories from '../Components/UserCard.jsx';
 
 export default function RND({ info, name }) {
 	const technologies = [
@@ -22,10 +21,16 @@ export default function RND({ info, name }) {
 			id="project-gallery"
 		>
 			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+				<Grid item xs={12} md={8}>
+					<h2>User Story</h2>
+					<UserStories info={info['UserStory']} />
+				</Grid>
+				<Grid item xs={12} md={4}>
+					<TextBox info={info['Implementation']} />
+				</Grid>
 				<Grid item xs={12} md={12} className="tech-item">
 					<TechUsed tech={info['Technologies used']} />
 				</Grid>
-				<UIUX info={info['UI']} className="card" />
 				<TextBox info={info['Challenge']} />
 			</Grid>
 		</Box>
@@ -49,7 +54,7 @@ function UIUX({ info, name }) {
 
 function TechUsed({ tech }) {
 	return (
-		<div className="tech-used card">
+		<div className="tech-used">
 			<h2>Technologies Used</h2>
 			<Box
 				sx={{
@@ -75,6 +80,7 @@ function TextBox({ info }) {
 		<Grid item xs={12} md={12}>
 			<h2>{info.title}</h2>
 			<p>{info.text}</p>
+			<p>{info.text2}</p>
 		</Grid>
 	);
 }
