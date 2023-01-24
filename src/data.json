@@ -149,8 +149,10 @@
 			},
 			"Challenge": {
 				"title": "Challenges",
-				"text": "The biggest challenge we faced was the lack of data for footpaths on campus. We created a JSON to represent the intersections and corners of footpaths on campus. We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
-				"image": "https://i.imgur.com/4Z7ZQ2M.png"
+				"text": "The biggest challenge we faced was the lack of data for footpaths on campus. To generate this data we created a JSON to represent the intersections and corners of footpaths on campus.",
+				"text2": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
+				"image": "https://i.imgur.com/Kf42moi.png",
+				"image2": "https://i.imgur.com/UsyCqNA.png"
 			},
 			"UserStory": {
 				"title": "User Story",

@@ -1,8 +1,11 @@
 import { faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React from 'react';
+import ImgTxtH from '../Components/ImgTxtH.jsx';
+import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 
 export default function RND({ info, name }) {
@@ -31,7 +34,8 @@ export default function RND({ info, name }) {
 				<Grid item xs={12} md={12} className="tech-item">
 					<TechUsed tech={info['Technologies used']} />
 				</Grid>
-				<TextBox info={info['Challenge']} />
+				{/* <TextBox info={info['Challenge']} /> */}
+				<TxtWithPopup info={info['Challenge']} />
 			</Grid>
 		</Box>
 	);
