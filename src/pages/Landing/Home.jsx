@@ -8,6 +8,8 @@ import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import * as React from 'react';
+import MillionDollarMullet from '../../images/MillionDollarMullet.png';
+import winky from '../../images/winky.gif';
 
 // const theme = createTheme({
 //   typography: {
@@ -54,7 +56,7 @@ export default function Home({ mobile }) {
 						Balance in all things.
 					</h3>
 				</Box>
-				<Box component="img" src={photo} sx={{ height: '30vh' }}></Box>
+				<Box component="img" src={winky} sx={{ height: '30vh' }}></Box>
 			</Box>
 		</>
 	);

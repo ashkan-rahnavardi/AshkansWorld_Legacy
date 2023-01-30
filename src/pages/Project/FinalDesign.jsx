@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
+import ImgTxtH from '../Components/ImgTxtH.jsx';
 
 export default function FinalDesign({ info }) {
 	return (
@@ -11,7 +12,7 @@ export default function FinalDesign({ info }) {
 			id="project-gallery"
 		>
 			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
-				<UIUX info={info['UI']} className="card" />
+				<ImgTxtH info={info['UI']} className="card" />
 			</Grid>
 		</Box>
 	);

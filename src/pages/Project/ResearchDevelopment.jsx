@@ -9,12 +9,6 @@ import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 
 export default function RND({ info, name }) {
-	const technologies = [
-		{ icon: faReact, name: 'React' },
-		{ icon: faNodeJs, name: 'Node.js' },
-		{ icon: faJs, name: 'JavaScript' },
-	];
-
 	console.log(info['Technologies used']);
 	return (
 		<Box
@@ -34,25 +28,9 @@ export default function RND({ info, name }) {
 				<Grid item xs={12} md={12} className="tech-item">
 					<TechUsed tech={info['Technologies used']} />
 				</Grid>
-				{/* <TextBox info={info['Challenge']} /> */}
 				<TxtWithPopup info={info['Challenge']} />
 			</Grid>
 		</Box>
-	);
-}
-
-function UIUX({ info, name }) {
-	return (
-		<>
-			<Grid item xs={12} md={6}>
-				<h2>{info.title}</h2>
-				<p>{info.text}</p>
-				<p>{info.text2}</p>
-			</Grid>
-			<Grid item xs={12} md={6}>
-				<img src={info.image} style={{ maxWidth: '100%' }}></img>
-			</Grid>
-		</>
 	);
 }
 
@@ -86,21 +64,5 @@ function TextBox({ info }) {
 			<p>{info.text}</p>
 			<p>{info.text2}</p>
 		</Grid>
-	);
-}
-
-function IconList({ tech, index }) {
-	return (
-		<div className="rnd-text">
-			<h3>Technologies used:</h3>
-			<ul>
-				{technologies.map((tech, index) => (
-					<li key={index}>
-						<FontAwesomeIcon icon={tech.icon} size="2x" />
-						{tech.name}
-					</li>
-				))}
-			</ul>
-		</div>
 	);
 }

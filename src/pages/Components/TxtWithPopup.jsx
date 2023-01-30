@@ -29,10 +29,10 @@ export function TxtWithPopup({ info }) {
 				<p>
 					{info.text2} <button onClick={handleClick2}>View</button>
 				</p>
-				<Popper id={id} open={open} anchorEl={anchorEl} placement="top">
+				<Popper id={id} open={open} anchorEl={anchorEl} placement="top-start">
 					<img src={info.image} style={{ width: '50%' }}></img>
 				</Popper>
-				<Popper id={id} open={open2} anchorEl={anchorEl2} placement="top">
+				<Popper id={id} open={open2} anchorEl={anchorEl2} placement="top-start">
 					<img src={info.image2} style={{ width: '50%' }}></img>
 				</Popper>
 			</Grid>

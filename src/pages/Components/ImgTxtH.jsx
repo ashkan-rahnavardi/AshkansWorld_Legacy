@@ -1,4 +1,6 @@
+import Grid from '@mui/material/Grid';
 import React from 'react';
+
 export default function ImgTxtH({ info }) {
 	return (
 		<>
