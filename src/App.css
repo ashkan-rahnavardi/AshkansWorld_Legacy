@@ -21,6 +21,12 @@ body {
     height: 100vh;
     width: 100%;
 } */
+
+.demo-vid {
+	max-width: 100%;
+	margin: 0;
+}
+
 .hoverable {
 	transition: transform 1.5s all;
 	margin: 0 auto;
