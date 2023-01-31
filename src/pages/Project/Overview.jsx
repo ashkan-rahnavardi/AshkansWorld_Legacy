@@ -2,71 +2,30 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import WayfindingLogo from '../../images/WayfindingLogo.png';
+import ImgTxtH from '../Components/ImgTxtH.jsx';
+import ImgTxtV from '../Components/ImgTxtV.jsx';
 
 export default function Overview({ info, name }) {
-	return (
-		<>
-			<h1>{name}</h1>
-			<CardGallery info={info} name={name} />
-		</>
-	);
-}
-
-function TextBox({ title, info, name }) {
-	if (info[title].horizontal) {
-		return (
-			<>
-				<Grid item xs={12} md={6}>
-					<h2>{title}</h2>
-					<p>{info[title].text}</p>
-					<p>{info[title].text2}</p>
-				</Grid>
-				<Grid item xs={12} md={6}>
-					<img
-						src={info[title].image}
-						style={{ maxWidth: '100%' }}
-						className="hoverable"
-					/>
-				</Grid>
-			</>
-		);
-	} else {
-		return (
-			<>
-				<Grid item xs={12} md={6}>
-					<h2>{title}</h2>
-					<p>{info[title].text}</p>
-					<p>{info[title].text2}</p>
-					<img
-						src={info[title].image}
-						style={{ maxWidth: '100%' }}
-						// className="hoverable"
-					></img>
-				</Grid>
-			</>
-		);
-	}
-}
-
-function CardGallery({ info, name }) {
+	console.log(name);
 	return (
 		<Box
 			sx={{
 				flexGrow: 1,
 			}}
-			id="project-gallery"
+			className="project-page"
 		>
-			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
-				<>
-					{Object.keys(info).map((key, index) => {
-						return (
-							// <Grid item xs={12} md={12} display="flex" key={index}>
-							// 	<TextBox title={key} info={info} name={name} />
-							// </Grid>
-							<TextBox title={key} info={info} name={name} key={index} />
-						);
-					})}
-				</>
+			<div className="project-logo" id={name + '-logo'}>
+				<img
+					src={WayfindingLogo}
+					alt="Wayfinding Logo"
+					className="project-logo"
+				/>
+			</div>
+			<Grid container spacing={2}>
+				<ImgTxtH info={info.Context} />
+				<ImgTxtV info={info.Scope} />
+				<ImgTxtV info={info.Objective} />
 			</Grid>
 		</Box>
 	);

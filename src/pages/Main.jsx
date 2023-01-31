@@ -32,7 +32,7 @@ export default function Main({ isMobile, content }) {
 		tabs = Object.keys(page);
 		tabs.shift();
 
-		name = page.name[1];
+		name = page.name[0];
 
 		views = [
 			<Overview info={page[tabs[0]]} name={name} />,

@@ -3,16 +3,19 @@
 		"name": ["SotBy", "SotBy"],
 		"Overview": {
 			"Context": {
+				"title": "Context",
 				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage vacations, resources and schedules, which led to a lof of confusion and inefficiency.",
 				"text2": "Only one person could edit the file at a time, and there was no way to track changes. Due to the lack of error control, if an error was made in the file it would be difficult to find and fix ",
 				"image": "https://i.imgur.com/fUqPRHb.png",
 				"horizontal": true
 			},
 			"Scope": {
+				"title": "Scope",
 				"text": "This project was going to eventually replace the old system, and would be used by the faculty to manage their schedules and resources.",
 				"text2": "I was apart of the second team to work on this project. The first team had developed a semi-functional backend which had most of the functionality required for the project. My team was given a 4 week sprint to develop a userfriendly frontend for the application."
 			},
 			"Objective": {
+				"title": "Objective",
 				"text": "My teams objective was to develop a user friendly frontend for the application, as well as implementing a secure login system for various account types.",
 				"text2": "Admin account types would be able to edit the schedule, resources and vacations of all users. Faculty account types would be able to edit their own schedule, resources and vacations."
 			}
@@ -102,16 +105,19 @@
 		"name": ["BCITWayFinding", "BCIT Wayfinding"],
 		"Overview": {
 			"Context": {
+				"title": "Context",
 				"text": "New students and faculty were having difficulty navigating the BCIT campus. The only resource available to them was a downloadable PDF map available on the BCIT website.",
 				"text2": "Google maps does not work for foot paths on campus, so students and faculty would have to go back and forth between google maps and the PDF map.",
 				"image": "https://i.imgur.com/F3VrMws.png",
 				"horizontal": true
 			},
 			"Scope": {
+				"title": "Scope",
 				"text": "This was an academic project during my last semester at BCIT. I was working with a team of 2 other students, and we were given 3 weeks to develop the project from the ground up.",
 				"text2": "Due to the limited resources and time, we decided to not include building interiors, and to instead focus on exterior foot paths and amenities."
 			},
 			"Objective": {
+				"title": "Objective",
 				"text": "The goal of this project was to create a proof of concept wayfinding mobile application for the BCIT Burnaby campus. The application would be able to geolocate the user on the campus, and provide them with directions to their destination."
 			}
 		},
@@ -147,8 +153,16 @@
 				"text": "Since we were only developing a prototype we decided to focus solely on the wayfinding aspect of the app. This allowed us to focus on the core functionality and not get bogged down by the additional features that would be required for a full-fledged app.",
 				"text2": "We ruled out the need to connect the app to a database. Instead, we created a JSON file with the data we needed and used the Google Maps API to display the data on the map."
 			},
-			"Challenge": {
+			"Challenges": {
 				"title": "Challenges",
+				"one": {
+					"text": "The biggest challenge we faced was the lack of data for footpaths on campus. To generate this data we created a JSON to represent the intersections and corners of footpaths on campus.",
+					"image": "https://i.imgur.com/Kf42moi.png"
+				},
+				"two": {
+					"text": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
+					"image": "https://i.imgur.com/UsyCqNA.png"
+				},
 				"text": "The biggest challenge we faced was the lack of data for footpaths on campus. To generate this data we created a JSON to represent the intersections and corners of footpaths on campus.",
 				"text2": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
 				"image": "https://i.imgur.com/Kf42moi.png",

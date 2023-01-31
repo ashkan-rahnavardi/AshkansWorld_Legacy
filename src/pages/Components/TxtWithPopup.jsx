@@ -1,41 +1,35 @@
+import PreviewIcon from '@mui/icons-material/Preview';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
 import Popper from '@mui/material/Popper';
 import React from 'react';
 
 export function TxtWithPopup({ info }) {
-	const [anchorEl, setAnchorEl] = React.useState(null);
-	const [anchorEl2, setAnchorEl2] = React.useState(null);
+	const [display, setDisplay] = React.useState(false);
+
+	const getDisplay = () => (display ? 'block' : 'none');
+	const getWidth = () => (display ? 6 : 12);
 
 	const handleClick = (event) => {
-		setAnchorEl(anchorEl ? null : event.currentTarget);
+		setDisplay(!display);
 	};
-
-	const handleClick2 = (event) => {
-		setAnchorEl2(anchorEl2 ? null : event.currentTarget);
-	};
-
-	const open = Boolean(anchorEl);
-	const open2 = Boolean(anchorEl2);
-	const id = open ? 'simple-popper' : undefined;
 
 	return (
-		<>
-			<Grid item xs={12} md={12}>
-				<h2>{info.title}</h2>
+		<div style={{ display: 'flex' }}>
+			<Grid item xs={12} md={display ? 6 : 12}>
 				<p>
-					{info.text} <button onClick={handleClick}>View</button>
+					{info.text}{' '}
+					<IconButton onClick={handleClick} color="blue">
+						<PreviewIcon />
+					</IconButton>
 				</p>
-				<p>
-					{info.text2} <button onClick={handleClick2}>View</button>
-				</p>
-				<Popper id={id} open={open} anchorEl={anchorEl} placement="top-start">
-					<img src={info.image} style={{ width: '50%' }}></img>
-				</Popper>
-				<Popper id={id} open={open2} anchorEl={anchorEl2} placement="top-start">
-					<img src={info.image2} style={{ width: '50%' }}></img>
-				</Popper>
 			</Grid>
-		</>
+			<Grid item md={display ? 6 : 0}>
+				<div style={{ display: getDisplay() }}>
+					<img src={info.image} style={{ maxWidth: '100%' }}></img>
+				</div>
+			</Grid>
+		</div>
 	);
 }

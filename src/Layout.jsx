@@ -17,6 +17,9 @@ const theme = createTheme({
 		black: {
 			main: '#000000',
 		},
+		blue: {
+			main: '#3366CC',
+		},
 	},
 });
 

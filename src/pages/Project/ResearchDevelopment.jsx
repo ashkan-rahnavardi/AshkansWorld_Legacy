@@ -9,17 +9,16 @@ import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 
 export default function RND({ info, name }) {
-	console.log(info['Technologies used']);
 	return (
 		<Box
 			sx={{
 				flexGrow: 1,
 			}}
-			id="project-gallery"
+			className="project-page"
 		>
-			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+			<Grid container spacing={2}>
 				<Grid item xs={12} md={8}>
-					<h2>User Story</h2>
+					<h1>User Story</h1>
 					<UserStories info={info['UserStory']} />
 				</Grid>
 				<Grid item xs={12} md={4}>
@@ -28,7 +27,11 @@ export default function RND({ info, name }) {
 				<Grid item xs={12} md={12} className="tech-item">
 					<TechUsed tech={info['Technologies used']} />
 				</Grid>
-				<TxtWithPopup info={info['Challenge']} />
+				<Grid item xs={12} md={12} className="challenges">
+					<h1>Challenges</h1>
+					<TxtWithPopup info={info['Challenges'].one} />
+					<TxtWithPopup info={info['Challenges'].two} />
+				</Grid>
 			</Grid>
 		</Box>
 	);
@@ -37,7 +40,7 @@ export default function RND({ info, name }) {
 function TechUsed({ tech }) {
 	return (
 		<div className="tech-used">
-			<h2>Technologies Used</h2>
+			<h1>Technologies Used</h1>
 			<Box
 				sx={{
 					flexGrow: 1,
@@ -60,7 +63,7 @@ function TechUsed({ tech }) {
 function TextBox({ info }) {
 	return (
 		<Grid item xs={12} md={12}>
-			<h2>{info.title}</h2>
+			<h1>{info.title}</h1>
 			<p>{info.text}</p>
 			<p>{info.text2}</p>
 		</Grid>

@@ -1,8 +1,10 @@
+import Grid from '@mui/material/Grid';
 import React from 'react';
-export function ImgTxtV({ info }) {
+
+export default function ImgTxtV({ info }) {
 	return (
 		<Grid item xs={12} md={6}>
-			<h2>{info.title}</h2>
+			<h1>{info.title}</h1>
 			<p>{info.text}</p>
 			<p>{info.text2}</p>
 			<img
