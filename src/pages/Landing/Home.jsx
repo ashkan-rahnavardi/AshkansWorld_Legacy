@@ -18,7 +18,7 @@ export default function Home({ mobile }) {
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={6} id="homeText">
 					<img src={wave}></img>
-					<h1>Howdy! I am Ashkan Rahnavardi</h1>
+					<h1>Howdy!!!! I am Ashkan Rahnavardi</h1>
 					<h3>
 						Code, a work of art,
 						<br />

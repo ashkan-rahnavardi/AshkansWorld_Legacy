@@ -31,10 +31,9 @@ function UIUX({ info, name }) {
 					<p>{info.text2}</p>
 					<h1>Features</h1>
 					<ul>
-						{/* {info.features.map((feature, index) => (
+						{info.features.map((feature, index) => (
 							<li key={index}>{feature}</li>
-						))} */}
-						<li>Poop</li>
+						))}
 					</ul>
 				</div>
 			</Grid>
