@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Wayfinding from '../../images/Wayfinding.mp4';
 
-const AutoplayVideo = () => {
+export default function AutoplayVideo() {
 	const videoRef = useRef(null);
 
 	useEffect(() => {
@@ -15,6 +15,4 @@ const AutoplayVideo = () => {
 			Your browser does not support the video tag.
 		</video>
 	);
-};
-
-export default AutoplayVideo;
+}

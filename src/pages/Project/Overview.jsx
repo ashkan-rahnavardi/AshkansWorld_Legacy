@@ -2,11 +2,19 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import WayfindingLogo from '../../images/WayfindingLogo.png';
+import SotByLogo from '../../images/SotByLogo.png';
+import WayfindingLogo from '../../images/WayfindingLogo2.png';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 import ImgTxtV from '../Components/ImgTxtV.jsx';
 
 export default function Overview({ info, name }) {
+	let logo = WayfindingLogo;
+
+	switch (name) {
+		case 'SotBy':
+			logo = SotByLogo;
+	}
+
 	console.log(name);
 	return (
 		<Box
@@ -16,11 +24,7 @@ export default function Overview({ info, name }) {
 			className="project-page"
 		>
 			<div className="project-logo" id={name + '-logo'}>
-				<img
-					src={WayfindingLogo}
-					alt="Wayfinding Logo"
-					className="project-logo"
-				/>
+				<img src={logo} alt={name + ' logo'} className="project-logo" />
 			</div>
 			<Grid container spacing={2}>
 				<ImgTxtH info={info.Context} />

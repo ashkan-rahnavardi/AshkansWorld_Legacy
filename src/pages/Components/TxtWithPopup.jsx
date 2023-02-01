@@ -27,7 +27,11 @@ export function TxtWithPopup({ info }) {
 			</Grid>
 			<Grid item md={display ? 6 : 0}>
 				<div style={{ display: getDisplay() }}>
-					<img src={info.image} style={{ maxWidth: '100%' }}></img>
+					<img
+						src={info.image}
+						style={{ maxWidth: '100%' }}
+						onClick={() => setDisplay(false)}
+					></img>
 				</div>
 			</Grid>
 		</div>

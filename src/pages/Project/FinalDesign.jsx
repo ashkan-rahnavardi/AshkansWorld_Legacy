@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
-import demo from '../../images/WayfindingDemo.gif';
 import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 
@@ -11,10 +10,9 @@ export default function FinalDesign({ info }) {
 			sx={{
 				flexGrow: 1,
 			}}
-			id="project-gallery"
+			className="project-page"
 		>
-			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
-				{/* <ImgTxtH info={info['UI']} className="card" /> */}
+			<Grid container spacing={2}>
 				<UIUX info={info['UI']} />
 			</Grid>
 		</Box>
@@ -26,13 +24,13 @@ function UIUX({ info, name }) {
 		<>
 			<Grid item xs={12} md={8}>
 				<div className="demo-text">
-					<h2>UI / UX</h2>
+					<h1>UI / UX</h1>
 					<p>{info.text}</p>
 					<p>{info.text2}</p>
-					<h2>Features</h2>
+					<h1>Features</h1>
 					<ul>
-						{info.features.map((feature) => (
-							<li>{feature}</li>
+						{info.features.map((feature, index) => (
+							<li key={index}>{feature}</li>
 						))}
 					</ul>
 				</div>

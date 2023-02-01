@@ -51,7 +51,7 @@ function TechUsed({ tech }) {
 					{tech.map((tech, index) => (
 						<Grid item xs={6} md={4} className="tech-item" key={index}>
 							<img src={tech[1]} alt={tech[0]} className="icon" />
-							<h4>{tech[0]}</h4>
+							<p>{tech[0]}</p>
 						</Grid>
 					))}
 				</Grid>

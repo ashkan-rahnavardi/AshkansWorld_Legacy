@@ -1,29 +1,10 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import Grid from '@mui/material/Grid';
 import * as React from 'react';
-import MillionDollarMullet from '../../images/MillionDollarMullet.png';
-import winky from '../../images/winky.gif';
-
-// const theme = createTheme({
-//   typography: {
-//     fontFamily: [
-//       'Courgette', 'cursive',
-//     ].join(','),
-//   }
-// })
-
-// const theme = useTheme();
+import AshPhoto from '../../images/ASH.jpg';
+import wave from '../../images/WavingHand.png';
 
 export default function Home({ mobile }) {
-	const photo = 'https://i.imgur.com/NJE1iHf.jpg';
-
 	function direction() {
 		if (mobile) {
 			return 'column';
@@ -33,20 +14,10 @@ export default function Home({ mobile }) {
 	}
 
 	return (
-		<>
-			<Box
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-				minHeight={mobile ? '60vh' : '80vh'}
-				flexDirection={direction}
-				gap="10%"
-			>
-				<Box
-					id="homeText"
-					fontSize={mobile ? 'x-small' : 'medium'}
-					textAlign="center"
-				>
+		<Box className="home-page">
+			<Grid container spacing={2}>
+				<Grid item xs={12} md={6} id="homeText">
+					<img src={wave}></img>
 					<h1>Howdy! I am Ashkan Rahnavardi</h1>
 					<h3>
 						Code, a work of art,
@@ -55,9 +26,41 @@ export default function Home({ mobile }) {
 						<br />
 						Balance in all things.
 					</h3>
-				</Box>
-				<Box component="img" src={winky} sx={{ height: '30vh' }}></Box>
-			</Box>
-		</>
+				</Grid>
+				<Grid item xs={12} md={6}>
+					<img src={AshPhoto} style={{ height: '60vh' }}></img>
+				</Grid>
+			</Grid>
+		</Box>
 	);
+
+	// return (
+	// 	<>
+	// 		<Box
+	// 			display="flex"
+	// 			justifyContent="center"
+	// 			alignItems="center"
+	// 			minHeight={mobile ? '60vh' : '80vh'}
+	// 			flexDirection={direction}
+	// 			gap="10%"
+	// 		>
+	// 			<Box
+	// 				id="homeText"
+	// 				fontSize={mobile ? 'x-small' : 'medium'}
+	// 				textAlign="center"
+	// 			>
+	// <img src={wave}></img>
+	// <h1>Howdy! I am Ashkan Rahnavardi</h1>
+	// <h3>
+	// 	Code, a work of art,
+	// 	<br />
+	// 	Pleasure, a skill honed with care,
+	// 	<br />
+	// 	Balance in all things.
+	// </h3>
+	// 			</Box>
+	// 			<Box component="img" src={AshPhoto} sx={{ height: '60vh' }}></Box>
+	// 		</Box>
+	// 	</>
+	// );
 }

@@ -6,8 +6,7 @@
 				"title": "Context",
 				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage vacations, resources and schedules, which led to a lof of confusion and inefficiency.",
 				"text2": "Only one person could edit the file at a time, and there was no way to track changes. Due to the lack of error control, if an error was made in the file it would be difficult to find and fix ",
-				"image": "https://i.imgur.com/fUqPRHb.png",
-				"horizontal": true
+				"image": "https://i.imgur.com/fUqPRHb.png"
 			},
 			"Scope": {
 				"title": "Scope",
@@ -49,45 +48,46 @@
 				"text": "Since we were only developing a prototype we decided to focus solely on the wayfinding aspect of the app. This allowed us to focus on the core functionality and not get bogged down by the additional features that would be required for a full-fledged app.",
 				"text2": "We ruled out the need to connect the app to a database. Instead, we created a JSON file with the data we needed and used the Google Maps API to display the data on the map."
 			},
-			"UI": {
-				"title": "UI/UX",
-				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps. The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
-				"image": "https://i.imgur.com/sG6fEEV.png"
-			},
-			"Challenge": {
+			"Challenges": {
 				"title": "Challenges",
-				"text": "The biggest challenge I faced was the lack of a database to store the data. I had to create a database from scratch using Google Sheets. I also had to create a script to pull the data from the database and convert it into a JSON file. This was a challenge because I had to learn how to use Google Sheets and Google Apps Script to create the database and script. I also had to learn how to use the Google Maps API to pull the data from the JSON file and display it on the map.",
-				"image": "https://i.imgur.com/4Z7ZQ2M.png"
+				"one": {
+					"text": "The biggest challenge I faced was the lack of a database to store the data. I had to create a database from scratch using Google Sheets. I also had to create a script to pull the data from the database and convert it into a JSON file. This was a challenge because I had to learn how to use Google Sheets and Google Apps Script to create the database and script. I also had to learn how to use the Google Maps API to pull the data from the JSON file and display it on the map.",
+					"image": "https://i.imgur.com/4Z7ZQ2M.png"
+				},
+				"two": {
+					"text": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
+					"image": "https://i.imgur.com/UsyCqNA.png"
+				}
 			},
 			"UserStory": {
 				"title": "User Story",
-				"name": "Eric Shawn",
-				"image": "https://i.imgur.com/AiP2hG9.jpg",
-				"age": "27",
-				"occupation": "Software Engineer",
+				"name": "Jenna Tolls",
+				"image": "https://i.imgur.com/2vSX37h.jpg",
+				"age": "43",
+				"occupation": "Instructor",
 				"points": [
 					{
 						"title": "Pain Points",
 						"points": [
-							"Always late because he gets lost around campus",
-							"Has diffuculty finding restrooms",
-							"Can't climb stairs because of his knee injury"
+							"Wastes time waiting for access to the google sheets",
+							"Stresses about having to book resources",
+							"Took a long time to learn how to use the google sheets"
 						]
 					},
 					{
 						"title": "Goals",
 						"points": [
-							"Easily find his way around campus",
-							"Find restrooms easily",
-							"Find wheelchair accessible routes"
+							"Become more efficient",
+							"Use faculty resources more effectively",
+							"Spend less time booking resources"
 						]
 					},
 					{
 						"title": "Needs",
 						"points": [
-							"Search for directions to a specific building",
-							"Request wheelchair accessible routes",
-							"Find restrooms on campus"
+							"A secure login system to request time off",
+							"View the schedule of all faculty members",
+							"Easily request resources for classes"
 						]
 					}
 				]
@@ -108,8 +108,7 @@
 				"title": "Context",
 				"text": "New students and faculty were having difficulty navigating the BCIT campus. The only resource available to them was a downloadable PDF map available on the BCIT website.",
 				"text2": "Google maps does not work for foot paths on campus, so students and faculty would have to go back and forth between google maps and the PDF map.",
-				"image": "https://i.imgur.com/F3VrMws.png",
-				"horizontal": true
+				"image": "https://i.imgur.com/F3VrMws.png"
 			},
 			"Scope": {
 				"title": "Scope",
@@ -142,12 +141,6 @@
 					"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png"
 				]
 			],
-			"UI": {
-				"title": "UI/UX",
-				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps.",
-				"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
-				"image": "https://i.imgur.com/sG6fEEV.png"
-			},
 			"Implementation": {
 				"title": "Implementation",
 				"text": "Since we were only developing a prototype we decided to focus solely on the wayfinding aspect of the app. This allowed us to focus on the core functionality and not get bogged down by the additional features that would be required for a full-fledged app.",
@@ -162,16 +155,12 @@
 				"two": {
 					"text": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
 					"image": "https://i.imgur.com/UsyCqNA.png"
-				},
-				"text": "The biggest challenge we faced was the lack of data for footpaths on campus. To generate this data we created a JSON to represent the intersections and corners of footpaths on campus.",
-				"text2": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
-				"image": "https://i.imgur.com/Kf42moi.png",
-				"image2": "https://i.imgur.com/UsyCqNA.png"
+				}
 			},
 			"UserStory": {
 				"title": "User Story",
 				"name": "Eric Shawn",
-				"image": "https://i.imgur.com/AiP2hG9.jpg",
+				"image": "https://i.imgur.com/J4PIPSo.jpg",
 				"age": "27",
 				"occupation": "Software Engineer",
 				"points": [
