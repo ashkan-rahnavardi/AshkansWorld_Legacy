@@ -96,8 +96,15 @@
 		"Final Design": {
 			"UI": {
 				"title": "UI/UX",
-				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps. The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
-				"image": "https://i.imgur.com/sG6fEEV.png"
+				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps.",
+				"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
+				"image": "https://i.imgur.com/sG6fEEV.png",
+				"features": [
+					"Autocomplete searchbar for buildings and amenities",
+					"Geolocation",
+					"Color coordinated map markers",
+					"Building/Amenity photo and description"
+				]
 			}
 		}
 	},
