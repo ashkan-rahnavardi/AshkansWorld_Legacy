@@ -15,7 +15,7 @@ export default function FinalDesign({ info }) {
 			className="project-page"
 		>
 			<Grid container spacing={2}>
-				<UIUX info={info['UI']} />
+				<UIUX info={info.UI} />
 			</Grid>
 		</Box>
 	);
@@ -31,9 +31,10 @@ function UIUX({ info, name }) {
 					<p>{info.text2}</p>
 					<h1>Features</h1>
 					<ul>
-						{info.features.map((feature, index) => (
+						{/* {info.features.map((feature, index) => (
 							<li key={index}>{feature}</li>
-						))}
+						))} */}
+						<li>Poop</li>
 					</ul>
 				</div>
 			</Grid>
