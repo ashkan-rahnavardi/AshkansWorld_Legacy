@@ -100,7 +100,7 @@
 				"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
 				"image": "https://i.imgur.com/sG6fEEV.png",
 				"features": [
-					"Autocomplete searchbar for buildings and amenities",
+					"Does the thing",
 					"Geolocation",
 					"Color coordinated map markers",
 					"Building/Amenity photo and description"

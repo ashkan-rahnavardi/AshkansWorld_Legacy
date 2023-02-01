@@ -5,6 +5,8 @@ import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 
 export default function FinalDesign({ info }) {
+	console.log(info);
+
 	return (
 		<Box
 			sx={{
