@@ -37,7 +37,7 @@ export default function Main({ isMobile, content }) {
 		views = [
 			<Overview info={page[tabs[0]]} name={name} />,
 			<RND info={page[tabs[1]]} />,
-			<FinalDesign info={page[tabs[2]]} />,
+			<FinalDesign info={page[tabs[2]]} name={name} />,
 		];
 	}
 

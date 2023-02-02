@@ -9,6 +9,24 @@ import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 
 export default function RND({ info, name }) {
+	let challenges = (
+		<>
+			<h1>Challenges</h1>
+			<TxtWithPopup info={info['Challenges'].one} />
+			<TxtWithPopup info={info['Challenges'].two} />
+		</>
+	);
+
+	switch (name) {
+		case 'SotBy':
+			logo = (
+				<>
+				</>
+			);
+	}
+
+	function filterContent() {}
+
 	return (
 		<Box
 			sx={{

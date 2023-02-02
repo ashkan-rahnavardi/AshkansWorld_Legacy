@@ -45,18 +45,16 @@
 			],
 			"Implementation": {
 				"title": "Implementation",
-				"text": "Since we were only developing a prototype we decided to focus solely on the wayfinding aspect of the app. This allowed us to focus on the core functionality and not get bogged down by the additional features that would be required for a full-fledged app.",
-				"text2": "We ruled out the need to connect the app to a database. Instead, we created a JSON file with the data we needed and used the Google Maps API to display the data on the map."
+				"text": "The team before us had developed a backend for the application using a PERN stack. We used this backend to develop the frontend for the application using React and Material UI.",
+				"text2": "We also implemented a secure login system using JSON Web Tokens and bcrypt. The login system was able to differentiate between admin and faculty account types, and would only allow admin account types to edit the schedule, resources and vacations of all users."
 			},
 			"Challenges": {
 				"title": "Challenges",
 				"one": {
-					"text": "The biggest challenge I faced was the lack of a database to store the data. I had to create a database from scratch using Google Sheets. I also had to create a script to pull the data from the database and convert it into a JSON file. This was a challenge because I had to learn how to use Google Sheets and Google Apps Script to create the database and script. I also had to learn how to use the Google Maps API to pull the data from the JSON file and display it on the map.",
-					"image": "https://i.imgur.com/4Z7ZQ2M.png"
+					"text": "The main challenge we faced was learning how to use the backend that was developed by the previous team. We had to learn how to use the API endpoints that were developed, and how to use the database."
 				},
 				"two": {
-					"text": "We then developed a python script which would interpolate the nodes between the corners and intersections to create a more accurate representation of the footpaths on campus.",
-					"image": "https://i.imgur.com/UsyCqNA.png"
+					"text": ""
 				}
 			},
 			"UserStory": {
@@ -94,18 +92,20 @@
 			}
 		},
 		"Final Design": {
-			"UI": {
-				"title": "UI/UX",
-				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps.",
-				"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
-				"image": "https://i.imgur.com/sG6fEEV.png",
-				"features": [
-					"Does the thing",
-					"Geolocation",
-					"Color coordinated map markers",
-					"Building/Amenity photo and description"
-				]
-			}
+			"title": "UI/UX",
+			"text": "We decided to make each column in the calendar represent a week, this would allow the user to see the schedule for the entire month at a glance. We also decided to make the calendar view the landing page, so that the user would be able to see the schedule for the current month without having to log in.",
+			"text2": "Once logged in users are able to interact with the calendar in order to edit their schedule, request resources and request time off.",
+			"features": [
+				"Secure login system",
+				"Simultaneous access for all users ",
+				"Realtime updates via Socket.IO",
+				"Additional features for admin users",
+				"Detailed view of each course",
+				"Drag and drop to edit schedule",
+				"Request resources for classes"
+			],
+			"nextStep": "The next major step for this project would be to host the application on a server. This would allow the application to be used by all faculty members at BCIT.",
+			"nextStep2": "Additional testing and optomization would also be required to ensure that the application is stable and secure."
 		}
 	},
 	{
@@ -199,18 +199,17 @@
 			}
 		},
 		"Final Design": {
-			"UI": {
-				"title": "UI/UX",
-				"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps.",
-				"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
-				"image": "https://i.imgur.com/sG6fEEV.png",
-				"features": [
-					"Autocomplete searchbar for buildings and amenities",
-					"Geolocation",
-					"Color coordinated map markers",
-					"Building/Amenity photo and description"
-				]
-			}
+			"title": "UI/UX",
+			"text": "The UI/UX of the app was designed to closely mimic that of Google Maps in order to minimize the learning curve for users. Familiar navigation icons and layouts were employed to make the app easy to understand and use for those already familiar with Google Maps.",
+			"text2": "The map view, search bar, and menu options were all modeled after the well-known Google Maps interface to ensure a seamless transition for users.",
+			"features": [
+				"Autocomplete searchbar for buildings and amenities",
+				"Geolocation",
+				"Color coordinated map markers",
+				"Building/Amenity photo and description"
+			],
+			"nextStep": "More accurate footpath data is required to improve the functionality of the app. This data could be crowd sourced by students and staff and would include routes that go through buildings and other areas that are not currently included in the app.",
+			"nextStep2": "An admin control panel would be required to allow for updating the map, and sending out alerts to all users. This would allow for the app to be used for emergency situations such as fire alarms and lockdowns."
 		}
 	}
 ]

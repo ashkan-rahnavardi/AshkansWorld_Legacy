@@ -15,14 +15,23 @@ export function TxtWithPopup({ info }) {
 		setDisplay(!display);
 	};
 
+	const showButton = () => {
+		if (info.image) {
+			return (
+				<IconButton onClick={handleClick} color="blue">
+					<PreviewIcon />
+				</IconButton>
+			);
+		} else {
+			return <></>;
+		}
+	};
+
 	return (
 		<div style={{ display: 'flex' }}>
 			<Grid item xs={12} md={display ? 6 : 12}>
 				<p>
-					{info.text}{' '}
-					<IconButton onClick={handleClick} color="blue">
-						<PreviewIcon />
-					</IconButton>
+					{info.text} {showButton()}
 				</p>
 			</Grid>
 			<Grid item md={display ? 6 : 0}>
