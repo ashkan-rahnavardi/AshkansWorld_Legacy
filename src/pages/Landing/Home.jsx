@@ -17,7 +17,7 @@ export default function Home({ mobile }) {
 		<Box className="home-page">
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={6} id="homeText">
-					<img src={wave}></img>
+					<img src={wave} id="wave-emoji"></img>
 					<h1>Howdy!!!! I am Ashkan Rahnavardi</h1>
 					<h3>
 						Code, a work of art,
@@ -28,7 +28,7 @@ export default function Home({ mobile }) {
 					</h3>
 				</Grid>
 				<Grid item xs={12} md={6}>
-					<img src={AshPhoto} style={{ height: '60vh' }}></img>
+					<img src={AshPhoto} id="ash-photo"></img>
 				</Grid>
 			</Grid>
 		</Box>

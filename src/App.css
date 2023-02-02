@@ -19,9 +19,14 @@ body {
 	text-align: center;
 }
 
-#homeText img {
-	max-height: 10rem;
+#wave-emoji {
+	max-height: 8rem;
 	padding-top: 8rem;
+	padding-right: 8rem;
+}
+
+#ash-photo {
+	max-width: 420px;
 }
 
 .project-page {
@@ -188,8 +193,11 @@ body {
 		padding-top: 0rem;
 		font-size: small;
 	}
-	#homeText img {
+	#wave-emoji {
 		max-height: 5rem;
 		padding-top: 0rem;
+	}
+	#ash-photo {
+		max-width: 90vw;
 	}
 }
