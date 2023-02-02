@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SotByLogo from '../../images/SotByLogo.png';
-import WayfindingLogo from '../../images/WayfindingLogo2.png';
+import WayfindingLogo from '../../images/WayfindingLogo.png';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 import ImgTxtV from '../Components/ImgTxtV.jsx';
 
