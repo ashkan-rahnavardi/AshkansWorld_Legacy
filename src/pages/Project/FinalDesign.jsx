@@ -39,8 +39,7 @@ function UIUX({ info, name }) {
 			</Grid>
 			<Grid item xs={12} md={4}>
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					{/* <AutoplayVideo /> */}
-					<h1>Video</h1>
+					<AutoplayVideo />
 				</div>
 			</Grid>
 		</>
