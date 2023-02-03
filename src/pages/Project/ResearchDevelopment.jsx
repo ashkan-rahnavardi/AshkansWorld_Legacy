@@ -7,26 +7,9 @@ import React from 'react';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
+import { TechUsed } from './../Components/TechUsed.jsx';
 
 export default function RND({ info, name }) {
-	let challenges = (
-		<>
-			<h1>Challenges</h1>
-			<TxtWithPopup info={info['Challenges'].one} />
-			<TxtWithPopup info={info['Challenges'].two} />
-		</>
-	);
-
-	switch (name) {
-		case 'SotBy':
-			logo = (
-				<>
-				</>
-			);
-	}
-
-	function filterContent() {}
-
 	return (
 		<Box
 			sx={{
@@ -42,8 +25,9 @@ export default function RND({ info, name }) {
 				<Grid item xs={12} md={4}>
 					<TextBox info={info['Implementation']} />
 				</Grid>
-				<Grid item xs={12} md={12} className="tech-item">
-					<TechUsed tech={info['Technologies used']} />
+				<Grid item xs={12} md={12}>
+					<h1>Technologies Used</h1>
+					<TechUsed tech={info['Technologies used']} width={4} />
 				</Grid>
 				<Grid item xs={12} md={12} className="challenges">
 					<h1>Challenges</h1>
@@ -52,29 +36,6 @@ export default function RND({ info, name }) {
 				</Grid>
 			</Grid>
 		</Box>
-	);
-}
-
-function TechUsed({ tech }) {
-	return (
-		<div className="tech-used">
-			<h1>Technologies Used</h1>
-			<Box
-				sx={{
-					flexGrow: 1,
-				}}
-				id="project-gallery"
-			>
-				<Grid container spacing={2}>
-					{tech.map((tech, index) => (
-						<Grid item xs={6} md={4} className="tech-item" key={index}>
-							<img src={tech[1]} alt={tech[0]} className="icon" />
-							<p>{tech[0]}</p>
-						</Grid>
-					))}
-				</Grid>
-			</Box>
-		</div>
 	);
 }
 

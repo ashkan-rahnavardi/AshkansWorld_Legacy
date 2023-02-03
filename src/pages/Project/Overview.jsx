@@ -21,7 +21,7 @@ export default function Overview({ info, name }) {
 			sx={{
 				flexGrow: 1,
 			}}
-			className="project-page"
+			className="project-page overview"
 		>
 			<div className="project-logo" id={name + '-logo'}>
 				<img src={logo} alt={name + ' logo'} className="project-logo" />

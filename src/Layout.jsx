@@ -18,7 +18,10 @@ const theme = createTheme({
 			main: '#000000',
 		},
 		blue: {
-			main: '#3366CC',
+			main: '#13005A',
+		},
+		secondary: {
+			main: '#7F8487',
 		},
 	},
 });
@@ -69,31 +72,40 @@ export default function Layout({ children }) {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Box
-				className="App"
-				display="flex"
-				alignContent={isMobile ? 'center' : 'start'}
-				justifyContent="center"
-				height="100vh"
-				sx={applyBackgroundPhone()}
-			>
-				<Box
-					width={applyWidth()}
-					height={isMobile ? 800 : '100vh'}
-					paddingTop={applyPadding()}
-				>
+			<Box className="App" display="flex" justifyContent="center">
+				<Box width="1080px">
 					<App isMobile={isMobile} />
-					{/* <Outlet /> */}
 				</Box>
 			</Box>
-			{/* <Button
-				variant="outlined"
-				color="success"
-				sx={{ position: 'sticky', bottom: '0', left: '0' }}
-				onClick={toggleMobile}
-			>
-				{isMobile ? 'View Desktop' : 'View Mobile'}
-			</Button> */}
 		</ThemeProvider>
 	);
+
+	// return (
+	// 	<ThemeProvider theme={theme}>
+	// 		<Box
+	// 			className="App"
+	// 			display="flex"
+	// 			alignContent={isMobile ? 'center' : 'start'}
+	// 			justifyContent="center"
+	// 			sx={applyBackgroundPhone()}
+	// 		>
+	// 			<Box
+	// 				width={applyWidth()}
+	// 				// height={isMobile ? 800 : '100vh'}
+	// 				paddingTop={applyPadding()}
+	// 			>
+	// 				<App isMobile={isMobile} />
+	// 				{/* <Outlet /> */}
+	// 			</Box>
+	// 		</Box>
+	// 		{/* <Button
+	// 			variant="outlined"
+	// 			color="success"
+	// 			sx={{ position: 'sticky', bottom: '0', left: '0' }}
+	// 			onClick={toggleMobile}
+	// 		>
+	// 			{isMobile ? 'View Desktop' : 'View Mobile'}
+	// 		</Button> */}
+	// 	</ThemeProvider>
+	// );
 }

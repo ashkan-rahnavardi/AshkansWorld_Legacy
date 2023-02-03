@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	height: 100%;
 }
 
 #ARLogo {
@@ -11,27 +12,82 @@ body {
 	display: flex;
 	align-content: center;
 	justify-content: center;
+	position: relative;
+}
+
+#home-content {
+	position: absolute;
 	padding-top: 10rem;
 }
 
+#home-bg {
+	opacity: 0.5;
+	width: 100vw;
+}
+
+/* .home-background {
+	background-image: url('./images/sky.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: calc(100vh - 75px);
+} */
+
+.tab-label {
+	font-family: 'Alegreya', serif;
+	font-size: large;
+}
+
+.tabs {
+	width: 100%;
+	padding-top: 2rem;
+}
+
 #homeText {
-	font-family: 'Courgette', cursive;
+	/* font-family: 'Courgette', cursive; */
+	font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
 
 #wave-emoji {
 	max-height: 8rem;
 	padding-top: 8rem;
-	padding-right: 8rem;
 }
 
 #ash-photo {
 	max-width: 420px;
 }
 
+.overview {
+	padding-top: 5px;
+}
+
 .project-page {
-	font-family: 'Alegreya', serif;
 	font-size: large;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.project-page h1 {
+	font-family: 'Alegreya', serif;
+}
+
+.project-page p {
+	font-family: 'Raleway', sans-serif;
+}
+
+.project-card {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.project-card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-card-content {
+	font-family: 'Raleway', sans-serif;
 }
 
 .popup {
@@ -87,10 +143,15 @@ body {
 	height: 50px;
 }
 
-.tech-item {
-	display: flex;
-	text-align: left;
+.project-card .icon {
+	width: 30px;
+	height: 30px;
 }
+
+/* .tech-item {
+	display: flex;
+	text-align: center;
+} */
 
 .card {
 	border-radius: 10px;
@@ -199,5 +260,14 @@ body {
 	}
 	#ash-photo {
 		max-width: 90vw;
+	}
+	#home-content {
+		padding-top: 0rem;
+	}
+	.tab-label {
+		font-size: small;
+	}
+	.tabs {
+		padding-top: 0px;
 	}
 }

@@ -32,7 +32,7 @@ function TabPanel(props) {
 			{...other}
 		>
 			{value === index && (
-				<Box sx={{ p: 2 }}>
+				<Box sx={{ height: '100%' }}>
 					<Typography component={'span'}>{children}</Typography>
 				</Box>
 			)}
@@ -68,14 +68,13 @@ export default function ResponsiveAppBar({
 	return (
 		<Box
 			sx={{
-				bgcolor: 'background.paper',
 				width: '100%',
 			}}
 		>
 			<AppBar
+				className="app-bar"
 				position="sticky"
 				style={{
-					background: 'white',
 					boxShadow: 'none',
 					top: '0',
 				}}
@@ -87,23 +86,20 @@ export default function ResponsiveAppBar({
 						<img src={AR_logo} className="logo" />
 					</Link>
 					<Tabs
+						className="tabs"
 						value={value}
 						onChange={handleChange}
 						indicatorColor="secondary"
-						textColor="secondary"
+						textColor="black"
 						variant="fullWidth"
 						aria-label="full width tabs example"
-						sx={{
-							width: '100%',
-						}}
 					>
 						{tabs.map((label, index) => {
 							return (
 								<Tab
-									label={label}
+									label={<span className="tab-label">{label}</span>}
 									{...a11yProps(index)}
 									key={index}
-									className="homeText"
 									wrapped
 								/>
 							);
