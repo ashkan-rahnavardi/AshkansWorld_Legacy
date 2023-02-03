@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { CircularProgress } from './../Components/CircularProgress.jsx';
 
-import ashResume from '../../public/resumeV4.pdf';
+import ashResume from '../../images/resumeV4.pdf';
 
 export default function About() {
 	const skills = [
