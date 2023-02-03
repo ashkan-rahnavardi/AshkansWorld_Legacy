@@ -13,9 +13,9 @@ import {
 	useParams,
 } from 'react-router-dom';
 import Layout from './Layout.jsx';
+import About from './pages/Landing/About.jsx';
 import Home from './pages/Landing/Home.jsx';
 import Projects from './pages/Landing/Projects.jsx';
-import Resume from './pages/Landing/Resume.jsx';
 import Main from './pages/Main.jsx';
 import Project from './pages/Project.jsx';
 import Overview from './pages/Project/Overview.jsx';
@@ -30,7 +30,7 @@ export default function App({ isMobile }) {
 	const pages = {
 		landing: {
 			tabLabels: ['Home', 'Projects', 'About'],
-			components: [<Home isMobile={isMobile} />, <Projects />, <Resume />],
+			components: [<Home isMobile={isMobile} />, <Projects />, <About />],
 		},
 		project: {
 			tabLabels: ['OverView', 'Research & Development', 'Final Design'],

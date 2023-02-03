@@ -25,16 +25,6 @@ export default function Home({ mobile }) {
 	console.log(height);
 
 	return (
-		// <div
-		// 	className="home-background"
-		// 	style={{
-		// 		backgroundImage: 'url(' + sky + ')',
-		// 		backgroundSize: 'cover',
-		// 		backgroundRepeat: 'no-repeat',
-		// 		backgroundPosition: 'center',
-		// 		height: bgHeight,
-		// 	}}
-		// >
 		<Box className="home-page" sx={{ height: bgHeight }}>
 			{/* <img src={dark} id="home-bg"></img> */}
 			<Grid container spacing={2} id="home-content">

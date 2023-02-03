@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import About from '../Landing/About.jsx';
 import Home from '../Landing/Home.jsx';
 import Projects from '../Landing/Projects.jsx';
-import Resume from '../Landing/Resume.jsx';
 // import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -90,7 +90,7 @@ export default function ResponsiveAppBar({
 						value={value}
 						onChange={handleChange}
 						indicatorColor="secondary"
-						textColor="black"
+						textColor="secondary.darker"
 						variant="fullWidth"
 						aria-label="full width tabs example"
 					>

@@ -180,7 +180,12 @@ const Projects = () => {
 			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
 				{projects.map((project, index) => {
 					return (
-						<ProjectCard project={project} index={index} navigate={navigate} />
+						<ProjectCard
+							project={project}
+							key={index}
+							index={index}
+							navigate={navigate}
+						/>
 						// <Grid item xs={12} md={6} display="flex" key={index}>
 						// 	<Card
 						// 		sx={{

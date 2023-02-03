@@ -6,9 +6,9 @@ import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import About from './Landing/About.jsx';
 import Home from './Landing/Home.jsx';
 import Projects from './Landing/Projects.jsx';
-import Resume from './Landing/Resume.jsx';
 import ResponsiveAppBar from './Layout/ResponsiveAppBar.jsx';
 import TabBar from './Layout/TabBar.jsx';
 import TabView from './Layout/TabView.jsx';
@@ -23,8 +23,8 @@ export default function Main({ isMobile, content }) {
 	const [value, setValue] = useState(0);
 	let { id } = useParams();
 
-	let views = [<Home />, <Projects />, <Resume />];
-	let tabs = ['Home', 'Projects', 'Resume'];
+	let views = [<Home />, <Projects />, <About />];
+	let tabs = ['Home', 'Projects', 'About'];
 	let name = '';
 	const page = data.filter((item) => item.name[0] === id)[0];
 

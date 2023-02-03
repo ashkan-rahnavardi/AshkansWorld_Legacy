@@ -5,7 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import App from './App';
-import './App.css';
+import './App.scss';
 import Main from './pages/Main.jsx';
 import Project from './pages/Project.jsx';
 
@@ -22,6 +22,7 @@ const theme = createTheme({
 		},
 		secondary: {
 			main: '#7F8487',
+			darker: '#000000',
 		},
 	},
 });
