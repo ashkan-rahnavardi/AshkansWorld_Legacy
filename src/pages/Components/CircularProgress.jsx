@@ -5,8 +5,12 @@ export function CircularProgress({ skills }) {
 	return (
 		<div>
 			<ul className="progress">
-				{skills.map((skill) => (
-					<li data-name={skill.name} data-percent={skill.percent + '%'}>
+				{skills.map((skill, index) => (
+					<li
+						data-name={skill.name}
+						data-percent={skill.percent + '%'}
+						key={index}
+					>
 						<svg viewBox="-10 -10 220 220">
 							<g fill="none" strokeWidth="6" transform="translate(100,100)">
 								<path

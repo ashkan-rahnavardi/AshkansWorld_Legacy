@@ -16,27 +16,27 @@
 		color: #93a2ac;
 		font-family: Lato;
 		font-weight: 100;
-		margin: 2rem;
+		margin: 0rem 1rem 3rem 1rem;
 		&:before {
 			content: attr(data-name);
 			position: absolute;
 			width: 100%;
-			bottom: -2rem;
+			bottom: -2.5rem;
 			font-weight: 400;
 		}
 		&:after {
 			content: attr(data-percent);
 			position: absolute;
 			width: 100%;
-			top: 3.7rem;
+			top: 1.4rem;
 			left: 0;
-			font-size: 2rem;
+			font-size: 1.5rem;
 			text-align: center;
 		}
 	}
 	svg {
-		width: 10rem;
-		height: 10rem;
+		width: 5rem;
+		height: 5rem;
 		&:nth-child(2) {
 			position: absolute;
 			left: 0;
