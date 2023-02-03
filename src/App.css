@@ -90,6 +90,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
+.project-card-content h2:last-of-type {
+	margin-bottom: 0;
+}
+
 .popup {
 	position: fixed;
 	bottom: 0;
