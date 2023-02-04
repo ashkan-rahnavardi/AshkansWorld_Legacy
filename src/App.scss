@@ -7,9 +7,9 @@ body {
 	width: 50%;
 }
 
-.about {
-	padding: 3rem;
-}
+// .about {
+// 	padding: 3rem;
+// }
 
 .home-page {
 	flex-grow: 1;
@@ -17,6 +17,22 @@ body {
 	align-content: center;
 	justify-content: center;
 	position: relative;
+}
+
+.pishi {
+	width: 100%;
+	border-radius: 10%;
+}
+// .socials {
+// 	padding-top: 2rem;
+// }
+
+// .socials button {
+// 	border: 3px solid black;
+// }
+
+.click-to-show {
+	color: #0000ee;
 }
 
 #home-content {
@@ -27,6 +43,19 @@ body {
 #home-bg {
 	opacity: 0.5;
 	width: 100vw;
+}
+
+.download-button {
+	background-color: white;
+	border: 3px solid black;
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 
 /* .home-background {
