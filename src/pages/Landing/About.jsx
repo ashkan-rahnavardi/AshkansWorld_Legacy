@@ -80,7 +80,7 @@ export default function About() {
 					<div
 						style={{
 							display: 'flex',
-							justifyContent: 'center',
+							justifyContent: 'space-evenly',
 							alignItems: 'center',
 						}}
 					>
