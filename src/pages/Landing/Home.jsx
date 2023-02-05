@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid';
 import * as React from 'react';
-import AshPhoto from '../../images/ASH.jpg';
+//import AshPhoto from '../../images/ASH.jpg';
+import AshLow from '../../images/AshLow.jpg';
 import wave from '../../images/WavingHand.png';
 
 export default function Home({}) {
@@ -19,7 +20,7 @@ export default function Home({}) {
 			</Grid>
 			<Grid item xs={12} md={6}>
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
-					<img src={AshPhoto} className="home__photo"></img>
+					<img src={AshLow} className="home__photo"></img>
 				</div>
 			</Grid>
 		</Grid>
