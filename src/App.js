@@ -1,5 +1,5 @@
 import { useTheme } from '@mui/material/styles';
-import React, { useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
 import About from './pages/Landing/About.jsx';
@@ -14,6 +14,9 @@ import RND from './pages/Project/ResearchDevelopment.jsx';
 const data = require('./data.json');
 
 export default function App({}) {
+	// const About = lazy(() => import('./pages/Landing/About.jsx'));
+	// const Home = lazy(() => import('./pages/Landing/Home.jsx'));
+	// const Projects = lazy(() => import('./pages/Landing/Projects.jsx'));
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	const { pathname } = useLocation();
@@ -54,41 +57,43 @@ export default function App({}) {
 		<div className="app">
 			<div className="app__content">
 				<TabBar content={getTabs()} value={value} handleChange={handleChange} />
-				<Routes>
-					<Route
-						path="/"
-						element={
-							<TabView
-								content={landing}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
-						}
-					/>
-					<Route
-						path="/projects/SotBy"
-						element={
-							<TabView
-								content={getProject(data[0])}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
-						}
-					/>
-					<Route
-						path="/projects/BCITWayFinding"
-						element={
-							<TabView
-								content={getProject(data[1])}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
-						}
-					/>
-				</Routes>
+				<Suspense fallback={<div>Loading...</div>}>
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<TabView
+									content={landing}
+									value={value}
+									handleChangeIndex={handleChangeIndex}
+									theme={theme}
+								/>
+							}
+						/>
+						<Route
+							path="/projects/SotBy"
+							element={
+								<TabView
+									content={getProject(data[0])}
+									value={value}
+									handleChangeIndex={handleChangeIndex}
+									theme={theme}
+								/>
+							}
+						/>
+						<Route
+							path="/projects/BCITWayFinding"
+							element={
+								<TabView
+									content={getProject(data[1])}
+									value={value}
+									handleChangeIndex={handleChangeIndex}
+									theme={theme}
+								/>
+							}
+						/>
+					</Routes>
+				</Suspense>
 			</div>
 		</div>
 	);

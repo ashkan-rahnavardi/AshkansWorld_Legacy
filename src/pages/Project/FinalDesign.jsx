@@ -1,7 +1,11 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import React from 'react';
-import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
+import React, { lazy } from 'react';
+// import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
+
+const AutoplayVideo = React.lazy(() =>
+	import('../Components/AutoPlayVideo.jsx')
+);
 
 export default function FinalDesign({ info, name }) {
 	console.log(info);

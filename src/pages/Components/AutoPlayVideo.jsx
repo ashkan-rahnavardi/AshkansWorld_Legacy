@@ -1,8 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { lazy, useEffect, useRef } from 'react';
 import Wayfinding from '../../images/demo.mp4';
 import Sotby from '../../images/SotbyDemo.mp4';
 
 export default function AutoplayVideo({ name }) {
+	// const Wayfinding = lazy(() => import('../../images/demo.mp4'));
+	// const Sotby = lazy(() => import('../../images/SotbyDemo.mp4'));
+
 	const videoRef = useRef(null);
 
 	let video = Wayfinding;
