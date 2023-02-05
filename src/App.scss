@@ -12,6 +12,10 @@ body {
 	width: 1080px;
 }
 
+.app__body {
+	font-family: 'Raleway', sans-serif;
+}
+
 .app__bar__tabs {
 	padding-top: 2rem;
 }
@@ -23,7 +27,6 @@ body {
 
 .home-view {
 	padding-top: 10rem;
-	font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
 
@@ -34,6 +37,14 @@ body {
 #home__text__wave-emoji {
 	max-height: 8rem;
 	padding-top: 8rem;
+}
+
+.about-view {
+	height: 100%;
+}
+
+.about__circular-progress {
+	padding-right: 4rem;
 }
 
 .pishi {
@@ -140,11 +151,6 @@ body {
 	height: 30px;
 }
 
-/* .tech-item {
-	display: flex;
-	text-align: center;
-} */
-
 .card {
 	border-radius: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -223,6 +229,11 @@ body {
 	margin: 0.5rem;
 }
 
+.socials {
+	position: fixed;
+	bottom: 0;
+}
+
 @media only screen and (max-width: 600px) {
 	.app__bar__tabs__label {
 		font-size: small;
@@ -243,6 +254,14 @@ body {
 	#home__text__wave-emoji {
 		max-height: 5rem;
 		padding-top: 0rem;
+	}
+	.about__circular-progress {
+		padding-right: 0rem;
+	}
+	.socials {
+		padding-left: 20vw;
+		position: relative;
+		bottom: 0;
 	}
 	.project-logo img {
 		max-width: 100%;

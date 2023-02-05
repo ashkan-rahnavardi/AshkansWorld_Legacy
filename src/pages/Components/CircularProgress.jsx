@@ -3,7 +3,7 @@ import './CircularProgress.scss';
 
 export function CircularProgress({ skills }) {
 	return (
-		<div>
+		<div className="about__circular-progress">
 			<ul className="progress">
 				{skills.map((skill, index) => (
 					<li

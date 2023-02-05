@@ -42,7 +42,7 @@ export default function About() {
 	];
 
 	return (
-		<Box sx={{ flexGrow: 1 }} className="about">
+		<Box sx={{ flexGrow: 1 }} className="about-view">
 			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
 				<Grid item xs={12} md={6}>
 					<h2>My Story</h2>

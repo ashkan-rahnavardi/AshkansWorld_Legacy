@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+
 @keyframes load {
 	0% {
 		stroke-dashoffset: 0;
@@ -154,14 +155,4 @@ $color-linkedin: #0072b1;
 		border-color: transparent;
 		transform: translate(-50%, 100%);
 	}
-}
-
-.about {
-	padding: 1rem;
-	min-height: calc(100vh - 60px - 80px);
-}
-
-.socials {
-	position: fixed;
-	bottom: 0;
 }

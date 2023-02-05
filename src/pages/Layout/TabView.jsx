@@ -29,14 +29,13 @@ TabPanel.propTypes = {
 };
 
 export default function TabView({ content, value, handleChangeIndex, theme }) {
-	const windowHeight = window.innerHeight;
-	const windowWidth = window.innerWidth;
+	let viewHeight = window.innerHeight - APP_BAR_HEIGHT_DESKTOP;
 
-	let viewHeight = windowHeight - APP_BAR_HEIGHT_DESKTOP;
-
-	if (windowWidth < 600) {
+	if (window.innerWidth < 600) {
 		viewHeight = windowHeight - APP_BAR_HEIGHT_MOBILE;
 	}
+
+	const [panelHeight, setPanelHeight] = React.useState(viewHeight);
 
 	return (
 		<SwipeableViews
@@ -53,7 +52,7 @@ export default function TabView({ content, value, handleChangeIndex, theme }) {
 						index={index}
 						dir={theme.direction}
 						key={index}
-						panelHeight={viewHeight}
+						panelHeight={panelHeight}
 					>
 						{panel}
 					</TabPanel>
