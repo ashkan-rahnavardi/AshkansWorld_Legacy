@@ -1,30 +1,14 @@
-import { CardActionArea, CardContent } from '@mui/material';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
-import React, { useEffect, useState } from 'react';
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ChatbotLogo from '../../images/ChatBotLogo.png';
 import HangadoLogo from '../../images/HangadoLogo.png';
 import SotByLogo from '../../images/SotByLogo.png';
 import WayfindingLogo from '../../images/WayfindingLogo.png';
 import ProjectCard from './../Components/ProjectCard.jsx';
 
-const APP_BAR_HEIGHT_DESKTOP = 80;
-const APP_BAR_HEIGHT_MOBILE = 56;
-
-const Projects = () => {
+export default function Projects() {
 	const navigate = useNavigate();
-
-	const height = window.innerHeight;
-	const width = window.innerWidth;
-
-	let bgHeight = height - APP_BAR_HEIGHT_DESKTOP;
-
-	if (width < 600) {
-		bgHeight = height - APP_BAR_HEIGHT_MOBILE;
-	}
 
 	const projects = [
 		{
@@ -176,52 +160,17 @@ const Projects = () => {
 	];
 
 	return (
-		<Box sx={{ flexGrow: 1, minHeight: bgHeight }} id="project-gallery">
-			<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
-				{projects.map((project, index) => {
-					return (
-						<ProjectCard
-							project={project}
-							key={index}
-							index={index}
-							navigate={navigate}
-						/>
-						// <Grid item xs={12} md={6} display="flex" key={index}>
-						// 	<Card
-						// 		sx={{
-						// 			display: 'flex',
-						// 			justifyContent: 'space-between',
-						// 			flexDirection: 'column',
-						// 			':hover': { boxShadow: 20 },
-						// 		}}
-						// 	>
-						// 		<CardActionArea
-						// 			onClick={() => {
-						// 				navigate(project.path);
-						// 			}}
-						// 		>
-						// 			{/* <CardActionArea> */}
-						// 			<CardContent>
-						// 				<h2>{project.title}</h2>
-						// 				<p>{project.description}</p>
-						// 				<b>View Preview {String.fromCharCode(8594)}</b>
-						// 			</CardContent>
-						// 			<CardMedia
-						// 				id="project-gallery-item"
-						// 				height="329"
-						// 				component="img"
-						// 				sx={{ objectFit: 'contain' }}
-						// 				image={project.image}
-						// 				title={project.imgTitle}
-						// 			/>
-						// 		</CardActionArea>
-						// 	</Card>
-						// </Grid>
-					);
-				})}
-			</Grid>
-		</Box>
+		<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+			{projects.map((project, index) => {
+				return (
+					<ProjectCard
+						project={project}
+						key={index}
+						index={index}
+						navigate={navigate}
+					/>
+				);
+			})}
+		</Grid>
 	);
-};
-
-export default Projects;
+}

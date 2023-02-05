@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import React, { useState } from 'react';
+import React from 'react';
 import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
-import ImgTxtH from '../Components/ImgTxtH.jsx';
 
 export default function FinalDesign({ info, name }) {
 	console.log(info);

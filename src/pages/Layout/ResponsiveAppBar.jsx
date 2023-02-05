@@ -90,7 +90,7 @@ export default function ResponsiveAppBar({
 						value={value}
 						onChange={handleChange}
 						indicatorColor="secondary"
-						textColor="secondary.darker"
+						textColor="secondary"
 						variant="fullWidth"
 						aria-label="full width tabs example"
 					>

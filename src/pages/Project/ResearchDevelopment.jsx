@@ -1,10 +1,6 @@
-import { faJs, faNodeJs, faReact } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React from 'react';
-import ImgTxtH from '../Components/ImgTxtH.jsx';
 import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 import { TechUsed } from './../Components/TechUsed.jsx';

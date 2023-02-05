@@ -3,46 +3,46 @@ body {
 	height: 100%;
 }
 
-#ARLogo {
-	width: 50%;
+.app {
+	display: flex;
+	justify-content: center;
 }
 
-// .about {
-// 	padding: 3rem;
-// }
+.app__content {
+	width: 1080px;
+}
 
-.home-page {
-	flex-grow: 1;
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	position: relative;
+.app__bar__tabs {
+	padding-top: 2rem;
+}
+
+.app__bar__tabs__label {
+	font-family: 'Alegreya', serif;
+	font-size: large;
+}
+
+.home-view {
+	padding-top: 10rem;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+.home__photo {
+	max-width: 420px;
+}
+
+#home__text__wave-emoji {
+	max-height: 8rem;
+	padding-top: 8rem;
 }
 
 .pishi {
 	width: 100%;
 	border-radius: 10%;
 }
-// .socials {
-// 	padding-top: 2rem;
-// }
-
-// .socials button {
-// 	border: 3px solid black;
-// }
 
 .click-to-show {
 	color: #0000ee;
-}
-
-#home-content {
-	position: absolute;
-	padding-top: 10rem;
-}
-
-#home-bg {
-	opacity: 0.5;
-	width: 100vw;
 }
 
 .download-button {
@@ -56,39 +56,6 @@ body {
 	font-size: 16px;
 	margin: 4px 2px;
 	cursor: pointer;
-}
-
-/* .home-background {
-	background-image: url('./images/sky.jpeg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: calc(100vh - 75px);
-} */
-
-.tab-label {
-	font-family: 'Alegreya', serif;
-	font-size: large;
-}
-
-.tabs {
-	width: 100%;
-	padding-top: 2rem;
-}
-
-#homeText {
-	/* font-family: 'Courgette', cursive; */
-	font-family: 'Raleway', sans-serif;
-	text-align: center;
-}
-
-#wave-emoji {
-	max-height: 8rem;
-	padding-top: 8rem;
-}
-
-#ash-photo {
-	max-width: 420px;
 }
 
 .overview {
@@ -134,18 +101,6 @@ body {
 	top: unset;
 	left: unset;
 }
-
-/* #project-gallery:has(div:hover) div:not(:hover) {
-    scale: .8;
-} */
-
-/* #background {
-    background-image: url('./images/iphone3.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-} */
 
 .demo-vid {
 	max-width: 100%;
@@ -235,12 +190,6 @@ body {
 	margin: 0.25rem;
 }
 
-.logo {
-	display: inline-flex;
-	flex-wrap: wrap;
-	padding-top: 5px;
-}
-
 .project-logo {
 	display: flex;
 	justify-content: center;
@@ -275,11 +224,25 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-	#homeText {
-		font-size: x-small;
+	.app__bar__tabs__label {
+		font-size: small;
 	}
-	.logo {
+	.app__bar__tabs {
+		padding-top: 0px;
+	}
+	.app__bar__logo {
 		width: 20vw;
+	}
+	.home-view {
+		padding-top: 2rem;
+		font-size: small;
+	}
+	.home__photo {
+		max-width: 90vw;
+	}
+	#home__text__wave-emoji {
+		max-height: 5rem;
+		padding-top: 0rem;
 	}
 	.project-logo img {
 		max-width: 100%;
@@ -294,25 +257,5 @@ body {
 	.user-info {
 		width: 60%;
 		left: 20%;
-	}
-	.home-page {
-		padding-top: 0rem;
-		font-size: small;
-	}
-	#wave-emoji {
-		max-height: 5rem;
-		padding-top: 0rem;
-	}
-	#ash-photo {
-		max-width: 90vw;
-	}
-	#home-content {
-		padding-top: 0rem;
-	}
-	.tab-label {
-		font-size: small;
-	}
-	.tabs {
-		padding-top: 0px;
 	}
 }

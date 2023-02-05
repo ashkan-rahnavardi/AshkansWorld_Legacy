@@ -1,7 +1,6 @@
 import { CardActionArea, CardContent } from '@mui/material';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
 import Grid from '@mui/material/Grid';
 import React from 'react';
 import { TechUsed } from './../Components/TechUsed.jsx';

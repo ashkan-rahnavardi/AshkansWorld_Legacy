@@ -1,41 +1,23 @@
-import React, { useState } from 'react';
-import About from '../Landing/About.jsx';
-import Home from '../Landing/Home.jsx';
-import Projects from '../Landing/Projects.jsx';
-// import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import { useTheme } from '@mui/material/styles';
-import Tab from '@mui/material/Tab';
-import Tabs from '@mui/material/Tabs';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import PropTypes from 'prop-types';
-import {
-	BrowserRouter,
-	Link,
-	Route,
-	Routes,
-	useNavigate,
-} from 'react-router-dom';
+import React from 'react';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 
+const APP_BAR_HEIGHT_DESKTOP = 80;
+const APP_BAR_HEIGHT_MOBILE = 56;
+
 function TabPanel(props) {
-	const { children, value, index, ...other } = props;
+	const { children, value, index, panelHeight, ...other } = props;
 
 	return (
 		<div
+			style={{ height: panelHeight }}
 			role="tabpanel"
 			hidden={value !== index}
 			id={`full-width-tabpanel-${index}`}
 			aria-labelledby={`full-width-tab-${index}`}
 			{...other}
 		>
-			{value === index && (
-				<Box sx={{ p: 3 }}>
-					<Typography component={'span'}>{children}</Typography>
-				</Box>
-			)}
+			{value === index && <span>{children}</span>}
 		</div>
 	);
 }
@@ -46,39 +28,37 @@ TabPanel.propTypes = {
 	value: PropTypes.number.isRequired,
 };
 
-export default function TabView({
-	isMobile,
-	content,
-	value,
-	handleChangeIndex,
-	theme,
-}) {
+export default function TabView({ content, value, handleChangeIndex, theme }) {
+	const windowHeight = window.innerHeight;
+	const windowWidth = window.innerWidth;
+
+	let viewHeight = windowHeight - APP_BAR_HEIGHT_DESKTOP;
+
+	if (windowWidth < 600) {
+		viewHeight = windowHeight - APP_BAR_HEIGHT_MOBILE;
+	}
+
 	return (
-		<Box
-			sx={{
-				bgcolor: 'background.paper',
-				width: '100%',
-			}}
+		<SwipeableViews
+			className="app__body"
+			axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+			index={value}
+			onChangeIndex={handleChangeIndex}
+			enableMouseEvents
 		>
-			<SwipeableViews
-				axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-				index={value}
-				onChangeIndex={handleChangeIndex}
-				enableMouseEvents
-			>
-				{content.map((panel, index) => {
-					return (
-						<TabPanel
-							value={value}
-							index={index}
-							dir={theme.direction}
-							key={index}
-						>
-							{panel}
-						</TabPanel>
-					);
-				})}
-			</SwipeableViews>
-		</Box>
+			{content.map((panel, index) => {
+				return (
+					<TabPanel
+						value={value}
+						index={index}
+						dir={theme.direction}
+						key={index}
+						panelHeight={viewHeight}
+					>
+						{panel}
+					</TabPanel>
+				);
+			})}
+		</SwipeableViews>
 	);
 }

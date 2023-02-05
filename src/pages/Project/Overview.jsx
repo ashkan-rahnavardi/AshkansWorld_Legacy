@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import SotByLogo from '../../images/SotByLogo.png';
 import WayfindingLogo from '../../images/WayfindingLogo.png';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
