@@ -1,23 +1,23 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
-
-const APP_BAR_HEIGHT_DESKTOP = 80;
-const APP_BAR_HEIGHT_MOBILE = 56;
 
 function TabPanel(props) {
 	const { children, value, index, panelHeight, ...other } = props;
 
 	return (
 		<div
-			style={{ height: panelHeight }}
 			role="tabpanel"
 			hidden={value !== index}
 			id={`full-width-tabpanel-${index}`}
 			aria-labelledby={`full-width-tab-${index}`}
 			{...other}
 		>
-			{value === index && <span>{children}</span>}
+			{value === index && (
+				<span>
+					<div className="app__body__panel">{children}</div>
+				</span>
+			)}
 		</div>
 	);
 }
@@ -29,14 +29,6 @@ TabPanel.propTypes = {
 };
 
 export default function TabView({ content, value, handleChangeIndex, theme }) {
-	let viewHeight = window.innerHeight - APP_BAR_HEIGHT_DESKTOP;
-
-	if (window.innerWidth < 600) {
-		viewHeight = windowHeight - APP_BAR_HEIGHT_MOBILE;
-	}
-
-	const [panelHeight, setPanelHeight] = React.useState(viewHeight);
-
 	return (
 		<SwipeableViews
 			className="app__body"
@@ -52,7 +44,6 @@ export default function TabView({ content, value, handleChangeIndex, theme }) {
 						index={index}
 						dir={theme.direction}
 						key={index}
-						panelHeight={panelHeight}
 					>
 						{panel}
 					</TabPanel>

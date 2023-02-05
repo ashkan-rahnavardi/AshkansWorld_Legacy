@@ -25,18 +25,25 @@ module.exports = {
 				test: /\.(s(a|c)ss)$/,
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
+			{
+				test: /\.(png|jpe?g|gif|mp4|pdf|docx)$/i,
+				loader: 'file-loader',
+				options: {
+					name: 'images/[name].[ext]',
+				},
+			},
 			// {
 			// 	test: /\.css$/i,
 			// 	use: ['style-loader', 'css-loader'],
 			// },
-			{
-				test: /\.(png|jpe?g|gif|mp4|pdf|docx)$/i,
-				use: [
-					{
-						loader: 'file-loader',
-					},
-				],
-			},
+			// {
+			// 	test: /\.(png|jpe?g|gif|mp4|pdf|docx)$/i,
+			// 	use: [
+			// 		{
+			// 			loader: 'file-loader',
+			// 		},
+			// 	],
+			// },
 		],
 	},
 	plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],

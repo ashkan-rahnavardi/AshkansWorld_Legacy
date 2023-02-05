@@ -1,10 +1,6 @@
 import Grid from '@mui/material/Grid';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import ChatbotLogo from '../../images/ChatBotLogo.png';
-import HangadoLogo from '../../images/HangadoLogo.png';
-import SotByLogo from '../../images/SotByLogo.png';
-import WayfindingLogo from '../../images/WayfindingLogo.png';
 import ProjectCard from './../Components/ProjectCard.jsx';
 
 export default function Projects() {
@@ -13,7 +9,7 @@ export default function Projects() {
 	const projects = [
 		{
 			title: 'BCITWayFinding',
-			logo: WayfindingLogo,
+			logo: 'WayfindingLogo.png',
 			description:
 				'Prototype navigation app for the BCIT Burnaby campus. Get directions to buildings from current location.',
 			image: 'https://i.imgur.com/vKBGAwz.png',
@@ -45,7 +41,7 @@ export default function Projects() {
 		},
 		{
 			title: 'SotBy',
-			logo: SotByLogo,
+			logo: 'SotByLogo.png',
 			description:
 				'Scheduling and Resource management application developed for the BCIT Automotive Department.',
 			image: 'https://i.imgur.com/2rfRttK.jpeg',
@@ -86,7 +82,7 @@ export default function Projects() {
 		},
 		{
 			title: 'Hangado',
-			logo: HangadoLogo,
+			logo: 'HangadoLogo.png',
 			description:
 				'A web application that helps users organize and plan their hangouts.',
 			image: 'https://i.imgur.com/OlLqcwS.png',
@@ -124,7 +120,7 @@ export default function Projects() {
 		},
 		{
 			title: 'ChatBot',
-			logo: ChatbotLogo,
+			logo: 'ChatBotLogo.png',
 			description:
 				'A simple intent recognition chatbot that can be trained to recognize and respond to user input.',
 			image: 'https://i.imgur.com/OrldVkl.png',
@@ -160,7 +156,7 @@ export default function Projects() {
 	];
 
 	return (
-		<Grid container spacing={2} paddingLeft={2} paddingRight={2}>
+		<Grid container spacing={2} paddingLeft={2} paddingRight={2} paddingTop={2}>
 			{projects.map((project, index) => {
 				return (
 					<ProjectCard

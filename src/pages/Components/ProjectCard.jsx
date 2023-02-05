@@ -29,9 +29,15 @@ export default function ProjectCard({ project, index, navigate }) {
 						handleClick();
 					}}
 				>
-					<CardContent className="project-card-content">
-						<div className="project-logo" id={project.title + '-logo'}>
-							<img src={project.logo} />
+					<CardContent className="project-card__content">
+						<div
+							className="project-card__banner"
+							id={project.title + '-banner'}
+						>
+							<img
+								src={'/images/' + project.logo}
+								className="project-card__banner__img"
+							/>
 						</div>
 						<h3>{project.description}</h3>
 						<Box sx={{ display: 'flex' }}>

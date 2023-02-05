@@ -16,6 +16,10 @@ body {
 	font-family: 'Raleway', sans-serif;
 }
 
+.app__body__panel {
+	min-height: calc(100vh - 80px);
+}
+
 .app__bar__tabs {
 	padding-top: 2rem;
 }
@@ -97,11 +101,13 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.project-card-content {
+.project-card__content {
+	height: 100%;
 	font-family: 'Raleway', sans-serif;
+	background-color: #f4f0e8;
 }
 
-.project-card-content h2:last-of-type {
+.project-card__content h2:last-of-type {
 	margin-bottom: 0;
 }
 
@@ -196,30 +202,30 @@ body {
 	margin: 0.25rem;
 }
 
-.project-logo {
+.project-card__banner {
 	display: flex;
 	justify-content: center;
 }
 
-#BCITWayFinding-logo {
+#BCITWayFinding-banner {
 	background-color: #151c47;
 }
 
-#SotBy-logo {
+#SotBy-banner {
 	background-color: #ded7cd;
 }
 
-#Hangado-logo {
+#Hangado-banner {
 	background-color: #f28b0c;
 }
 
-#ChatBot-logo {
+#ChatBot-banner {
 	background-color: #853666;
 }
 
-.project-logo img {
+.project-card__banner__img {
 	max-width: 100%;
-	height: 7rem;
+	height: 6rem;
 }
 
 .challenges h1 {
