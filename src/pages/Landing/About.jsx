@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import IconButton from '@mui/material/IconButton';
 import React from 'react';
-import pishi from '../../images/PishiHeadShot.jpg';
+import pishi from '../../images/PishiHeadShotLow.jpg';
 import { CircularProgress } from './../Components/CircularProgress.jsx';
 
 import ashResumeDocx from '../../images/resumeV4.docx';
