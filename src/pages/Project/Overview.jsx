@@ -17,7 +17,7 @@ export default function Overview({ project }) {
 				<img
 					src={'/images/' + project.logo}
 					alt={project.name + ' logo'}
-					className="project-logo"
+					className="project__banner__img"
 				/>
 			</div>
 			<Grid container spacing={2}>
