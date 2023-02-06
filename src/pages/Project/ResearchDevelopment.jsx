@@ -5,7 +5,7 @@ import { TxtWithPopup } from '../Components/TxtWithPopup.jsx';
 import UserStories from '../Components/UserCard.jsx';
 import { TechUsed } from './../Components/TechUsed.jsx';
 
-export default function RND({ info, name }) {
+export default function RND({ project }) {
 	return (
 		<Box
 			sx={{
@@ -16,19 +16,19 @@ export default function RND({ info, name }) {
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={8}>
 					<h1>User Story</h1>
-					<UserStories info={info['UserStory']} />
+					<UserStories info={project.Development.UserStory} />
 				</Grid>
 				<Grid item xs={12} md={4}>
-					<TextBox info={info['Implementation']} />
+					<TextBox info={project.Development.Implementation} />
 				</Grid>
 				<Grid item xs={12} md={12}>
 					<h1>Technologies Used</h1>
-					<TechUsed tech={info['Technologies used']} width={4} />
+					<TechUsed tech={project.Development.tech} width={4} />
 				</Grid>
 				<Grid item xs={12} md={12} className="challenges">
 					<h1>Challenges</h1>
-					<TxtWithPopup info={info['Challenges'].one} />
-					<TxtWithPopup info={info['Challenges'].two} />
+					<TxtWithPopup info={project.Development.Challenges.one} />
+					<TxtWithPopup info={project.Development.Challenges.two} />
 				</Grid>
 			</Grid>
 		</Box>

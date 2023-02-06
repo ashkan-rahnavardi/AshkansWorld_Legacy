@@ -111,6 +111,19 @@ body {
 	margin-bottom: 0;
 }
 
+.project-card__feature-item {
+	margin-top: 0.5rem;
+}
+.project-card__tech-used {
+	position: relative;
+}
+
+.project__banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .popup {
 	position: fixed;
 	bottom: 0;
@@ -136,6 +149,12 @@ body {
 	position: relative;
 }
 
+.tech-item {
+	display: flex;
+	align-items: center;
+	padding-top: 0.75rem;
+}
+
 .tech-used {
 	width: 100%;
 }
@@ -155,6 +174,7 @@ body {
 .project-card .icon {
 	width: 30px;
 	height: 30px;
+	padding-right: 0.25rem;
 }
 
 .card {
@@ -202,25 +222,20 @@ body {
 	margin: 0.25rem;
 }
 
-.project-card__banner {
-	display: flex;
-	justify-content: center;
-}
-
 #BCITWayFinding-banner {
-	background-color: #151c47;
+	background-color: #003c71;
 }
 
 #SotBy-banner {
-	background-color: #ded7cd;
+	background-color: #66806a;
 }
 
 #Hangado-banner {
-	background-color: #f28b0c;
+	background-color: #73777b;
 }
 
 #ChatBot-banner {
-	background-color: #853666;
+	background-color: #ffdb89;
 }
 
 .project-card__banner__img {

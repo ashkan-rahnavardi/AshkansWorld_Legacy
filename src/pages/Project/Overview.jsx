@@ -1,20 +1,11 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React from 'react';
-import SotByLogo from '../../images/SotByLogo.png';
-import WayfindingLogo from '../../images/WayfindingLogo.png';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 import ImgTxtV from '../Components/ImgTxtV.jsx';
 
-export default function Overview({ info, name }) {
-	let logo = WayfindingLogo;
-
-	switch (name) {
-		case 'SotBy':
-			logo = SotByLogo;
-	}
-
-	console.log(name);
+export default function Overview({ project }) {
+	console.log(project.name);
 	return (
 		<Box
 			sx={{
@@ -22,13 +13,17 @@ export default function Overview({ info, name }) {
 			}}
 			className="project-page overview"
 		>
-			<div className="project-logo" id={name + '-logo'}>
-				<img src={logo} alt={name + ' logo'} className="project-logo" />
+			<div className="project__banner" id={project.name + '-banner'}>
+				<img
+					src={'/images/' + project.logo}
+					alt={project.name + ' logo'}
+					className="project-logo"
+				/>
 			</div>
 			<Grid container spacing={2}>
-				<ImgTxtH info={info.Context} />
-				<ImgTxtV info={info.Scope} />
-				<ImgTxtV info={info.Objective} />
+				<ImgTxtH info={project.Overview.Context} />
+				<ImgTxtV info={project.Overview.Scope} />
+				<ImgTxtV info={project.Overview.Objective} />
 			</Grid>
 		</Box>
 	);

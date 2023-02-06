@@ -7,24 +7,24 @@ const AutoplayVideo = React.lazy(() =>
 	import('../Components/AutoPlayVideo.jsx')
 );
 
-export default function FinalDesign({ info, name }) {
-	console.log(info);
+export default function FinalDesign({ project }) {
+	console.log(project);
 
 	let content = (
 		<>
-			<UInFeatures info={info} name={name} />
-			<DemoVideo name={name} />
+			<UInFeatures info={project.FinalDesign} name={project.name} />
+			<DemoVideo name={project.name} />
 		</>
 	);
 
-	switch (name) {
+	switch (project.name) {
 		case 'SotBy':
 			content = (
 				<>
-					<UI info={info} />
-					<DemoVideo name={name} />
-					<Features info={info} />
-					<NextSteps info={info} />
+					<UI info={project.FinalDesign} />
+					<DemoVideo name={project.name} />
+					<Features info={project.FinalDesign} />
+					<NextSteps info={project.FinalDesign} />
 				</>
 			);
 	}

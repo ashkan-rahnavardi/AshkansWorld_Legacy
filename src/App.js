@@ -2,6 +2,7 @@ import { useTheme } from '@mui/material/styles';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.scss';
+import './images/WayfindingLogo.png';
 import About from './pages/Landing/About.jsx';
 import Home from './pages/Landing/Home.jsx';
 import Projects from './pages/Landing/Projects.jsx';
@@ -37,9 +38,9 @@ export default function App({}) {
 
 	function getProject(info) {
 		return [
-			<Overview info={info['Overview']} name={info['name'][0]} />,
-			<RND info={info['Research & Development']} />,
-			<FinalDesign info={info['Final Design']} name={info['name'][0]} />,
+			<Overview project={info} name={info['name'][0]} />,
+			<RND project={info} />,
+			<FinalDesign project={info} name={info['name'][0]} />,
 		];
 	}
 
@@ -71,7 +72,7 @@ export default function App({}) {
 							}
 						/>
 						<Route
-							path="/projects/SotBy"
+							path="/projects/BCITWayFinding"
 							element={
 								<TabView
 									content={getProject(data[0])}
@@ -82,7 +83,7 @@ export default function App({}) {
 							}
 						/>
 						<Route
-							path="/projects/BCITWayFinding"
+							path="/projects/SotBy"
 							element={
 								<TabView
 									content={getProject(data[1])}
