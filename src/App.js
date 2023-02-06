@@ -58,43 +58,43 @@ export default function App({}) {
 		<div className="app">
 			<div className="app__content">
 				<TabBar content={getTabs()} value={value} handleChange={handleChange} />
-				<Suspense fallback={<div>Loading...</div>}>
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<TabView
-									content={landing}
-									value={value}
-									handleChangeIndex={handleChangeIndex}
-									theme={theme}
-								/>
-							}
-						/>
-						<Route
-							path="/projects/BCITWayFinding"
-							element={
-								<TabView
-									content={getProject(data[0])}
-									value={value}
-									handleChangeIndex={handleChangeIndex}
-									theme={theme}
-								/>
-							}
-						/>
-						<Route
-							path="/projects/SotBy"
-							element={
-								<TabView
-									content={getProject(data[1])}
-									value={value}
-									handleChangeIndex={handleChangeIndex}
-									theme={theme}
-								/>
-							}
-						/>
-					</Routes>
-				</Suspense>
+				{/* <Suspense fallback={<div>Loading...</div>}> */}
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<TabView
+								content={landing}
+								value={value}
+								handleChangeIndex={handleChangeIndex}
+								theme={theme}
+							/>
+						}
+					/>
+					<Route
+						path="/projects/BCITWayFinding"
+						element={
+							<TabView
+								content={getProject(data[0])}
+								value={value}
+								handleChangeIndex={handleChangeIndex}
+								theme={theme}
+							/>
+						}
+					/>
+					<Route
+						path="/projects/SotBy"
+						element={
+							<TabView
+								content={getProject(data[1])}
+								value={value}
+								handleChangeIndex={handleChangeIndex}
+								theme={theme}
+							/>
+						}
+					/>
+				</Routes>
+				{/* </Suspense> */}
 			</div>
 		</div>
 	);
