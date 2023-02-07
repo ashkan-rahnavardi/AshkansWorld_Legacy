@@ -9,7 +9,14 @@ export default function Projects() {
 	const navigate = useNavigate();
 
 	return (
-		<Grid container spacing={2} paddingLeft={2} paddingRight={2} paddingTop={2}>
+		<Grid
+			container
+			spacing={1}
+			paddingLeft={2}
+			paddingRight={2}
+			paddingTop={1}
+			paddingBottom={1}
+		>
 			{data.map((project, index) => {
 				return (
 					<ProjectCard

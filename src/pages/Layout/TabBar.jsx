@@ -7,6 +7,8 @@ import Tabs from '@mui/material/Tabs';
 import Toolbar from '@mui/material/Toolbar';
 import { Link } from 'react-router-dom';
 
+import AR from '../../images/AR.png';
+
 function a11yProps(index) {
 	return {
 		id: `full-width-tab-${index}`,
@@ -15,9 +17,6 @@ function a11yProps(index) {
 }
 
 export default function TabBar({ content, value, handleChange }) {
-	const AR_logo =
-		'https://see.fontimg.com/api/renderfont4/w1OB8/eyJyIjoiZnMiLCJoIjo2NSwidyI6MTAwMCwiZnMiOjY1LCJmZ2MiOiIjMDAwMDAwIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/QVI/millenia-personal-use.png';
-
 	return (
 		<AppBar
 			className="app__bar"
@@ -30,7 +29,7 @@ export default function TabBar({ content, value, handleChange }) {
 		>
 			<Toolbar disableGutters>
 				<Link to="/" className="app__bar__logo">
-					<img src={AR_logo} className="app__bar__logo" />
+					<img src={AR} className="app__bar__logo" />
 				</Link>
 				<Tabs
 					className="app__bar__tabs"
