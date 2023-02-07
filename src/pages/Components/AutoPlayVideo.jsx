@@ -20,7 +20,7 @@ export default function AutoplayVideo({ name }) {
 	}, []);
 
 	return (
-		<video ref={videoRef} autoPlay loop className="demo-vid">
+		<video ref={videoRef} playsInline autoPlay loop muted className="demo-vid">
 			<source src={video} type="video/mp4" />
 			{/* <source src="your-video-file.webm" type="video/webm" /> */}
 			Your browser does not support the video tag.
