@@ -26,7 +26,6 @@ export default function TabBar({ content, value, handleChange }) {
 				background: '#EAEAEA',
 				boxShadow: 'none',
 				top: '0',
-				width: '100%',
 			}}
 		>
 			<Toolbar disableGutters>

@@ -1,6 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import './App.scss';
 import './images/WayfindingLogo.png';
 import About from './pages/Landing/About.jsx';
@@ -13,16 +14,13 @@ import Overview from './pages/Project/Overview.jsx';
 import RND from './pages/Project/ResearchDevelopment.jsx';
 
 const data = require('./data.json');
+const Wayfinding = data[0];
+const Sotby = data[1];
 
 export default function App({}) {
-	// const About = lazy(() => import('./pages/Landing/About.jsx'));
-	// const Home = lazy(() => import('./pages/Landing/Home.jsx'));
-	// const Projects = lazy(() => import('./pages/Landing/Projects.jsx'));
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	const { pathname } = useLocation();
-
-	const landing = [<Home isMobile={false} />, <Projects />, <About />];
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -35,14 +33,6 @@ export default function App({}) {
 	useEffect(() => {
 		setValue(0);
 	}, [pathname]);
-
-	function getProject(info) {
-		return [
-			<Overview project={info} name={info['name'][0]} />,
-			<RND project={info} />,
-			<FinalDesign project={info} name={info['name'][0]} />,
-		];
-	}
 
 	function getTabs() {
 		let tabs = ['Home', 'Projects', 'About'];
@@ -58,43 +48,53 @@ export default function App({}) {
 		<div className="app">
 			<div className="app__content">
 				<TabBar content={getTabs()} value={value} handleChange={handleChange} />
-				{/* <Suspense fallback={<div>Loading...</div>}> */}
 				<Routes>
 					<Route
 						path="/"
 						element={
-							<TabView
-								content={landing}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
+							<SwipeableViews
+								className="app__body"
+								axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+								index={value}
+								onChangeIndex={handleChangeIndex}
+							>
+								<Home />
+								<Projects />
+								<About />
+							</SwipeableViews>
 						}
 					/>
 					<Route
 						path="/projects/BCITWayFinding"
 						element={
-							<TabView
-								content={getProject(data[0])}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
+							<SwipeableViews
+								className="app__body"
+								axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+								index={value}
+								onChangeIndex={handleChangeIndex}
+							>
+								<Overview project={Wayfinding} />
+								<RND project={Wayfinding} />
+								<FinalDesign project={Wayfinding} />
+							</SwipeableViews>
 						}
 					/>
 					<Route
 						path="/projects/SotBy"
 						element={
-							<TabView
-								content={getProject(data[1])}
-								value={value}
-								handleChangeIndex={handleChangeIndex}
-								theme={theme}
-							/>
+							<SwipeableViews
+								className="app__body"
+								axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+								index={value}
+								onChangeIndex={handleChangeIndex}
+							>
+								<Overview project={Sotby} />
+								<RND project={Sotby} />
+								<FinalDesign project={Sotby} />
+							</SwipeableViews>
 						}
 					/>
 				</Routes>
-				{/* </Suspense> */}
 			</div>
 		</div>
 	);

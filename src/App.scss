@@ -12,16 +12,18 @@ body {
 }
 
 .app__content {
-	width: 1080px;
+	max-width: 1080px;
 }
 
 .app__body {
-	// font-family: 'Raleway', sans-serif;
 	font-family: 'Roboto', sans-serif;
 	color: #2b2b2b;
 	font-size: large;
+	width: 100vw;
+}
 
-	min-height: calc(100vh - 80px);
+.react-swipeable-view-container {
+	height: calc(100vh - 80px);
 }
 
 .app__body h1,
@@ -32,10 +34,6 @@ h2 {
 .app__bar {
 	width: 100vw;
 	background-color: #d3d3d3;
-}
-
-.app__body__panel {
-	min-height: calc(100vh - 80px);
 }
 
 .app__bar__tabs {
@@ -49,6 +47,7 @@ h2 {
 
 .home-view {
 	padding-top: 10rem;
+	padding-left: 1rem;
 	text-align: center;
 }
 
@@ -314,6 +313,7 @@ h2 {
 	}
 	.home-view {
 		padding-top: 2rem;
+		padding-left: 0;
 		font-size: small;
 	}
 	.home__photo {
@@ -355,5 +355,8 @@ h2 {
 		width: 52%;
 		left: 30%;
 		top: 20%;
+	}
+	.react-swipeable-view-container {
+		height: calc(100vh - 56px);
 	}
 }

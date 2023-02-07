@@ -5,7 +5,7 @@ import wave from '../../images/WavingHand.png';
 
 export default function Home({}) {
 	return (
-		<Grid container spacing={0} paddingLeft={2} className="home-view">
+		<Grid container spacing={0} className="home-view">
 			<Grid item xs={12} md={6} className="home__text">
 				<img src={wave} id="home__text__wave-emoji"></img>
 				<h1>Howdy! I am Ashkan Rahnavardi</h1>

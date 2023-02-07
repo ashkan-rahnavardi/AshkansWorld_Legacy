@@ -101,18 +101,18 @@ export default function About() {
 				</Grid>
 			</Grid>
 			<div className="socials">
-				<div class="social-icons">
-					<a class="social-icon social-icon--github">
-						<i class="fa fa-github"></i>
-						<div class="tooltip">Github</div>
+				<div className="social-icons">
+					<a className="social-icon social-icon--github">
+						<i className="fa fa-github"></i>
+						<div className="tooltip">Github</div>
 					</a>
-					<a class="social-icon social-icon--instagram">
-						<i class="fa fa-instagram"></i>
-						<div class="tooltip">Instagram</div>
+					<a className="social-icon social-icon--instagram">
+						<i className="fa fa-instagram"></i>
+						<div className="tooltip">Instagram</div>
 					</a>
-					<a class="social-icon social-icon--linkedin">
-						<i class="fa fa-linkedin"></i>
-						<div class="tooltip">LinkedIn</div>
+					<a className="social-icon social-icon--linkedin">
+						<i className="fa fa-linkedin"></i>
+						<div className="tooltip">LinkedIn</div>
 					</a>
 				</div>
 			</div>
