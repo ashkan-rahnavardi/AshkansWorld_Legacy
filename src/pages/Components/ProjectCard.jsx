@@ -14,15 +14,19 @@ export default function ProjectCard({ project, index, navigate }) {
 		navigate(project.path);
 	};
 
-	let preview = <h2>View Project {String.fromCharCode(8594)}</h2>;
+	let preview = (
+		<h2 className="project-card__final-text">
+			View Project {String.fromCharCode(8594)}
+		</h2>
+	);
 
 	switch (project.name) {
 		case 'Hangado':
 			handleClick = () => {};
-			preview = <h2>Coming Soon</h2>;
+			preview = <h2 className="project-card__final-text">Coming Soon</h2>;
 		case 'ChatBot':
 			handleClick = () => {};
-			preview = <h2>Coming Soon</h2>;
+			preview = <h2 className="project-card__final-text">Coming Soon</h2>;
 	}
 
 	return (
