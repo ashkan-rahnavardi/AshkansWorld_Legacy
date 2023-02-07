@@ -55,7 +55,7 @@ export default function ProjectCard({ project, index, navigate }) {
 								/>
 							</Grid>
 							<Grid item xs={6} md={6}>
-								<h2>Features</h2>
+								<h2 className="project-card__features-title">Features</h2>
 								<ul>
 									{project.FinalDesign.features.map((feature, index) => (
 										<li className="project-card__feature-item" key={index}>
