@@ -1,14 +1,13 @@
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import React from 'react';
 
 import '../../images/bootstrap.png';
-import '../../images/express.png';
+import '../../images/express.png'; //
 import '../../images/googleMaps.png';
 import '../../images/javascript.png';
-import '../../images/keras.png';
-import '../../images/mongodb.png';
-import '../../images/mui.png';
+import '../../images/keras.png'; //
+import '../../images/mongodb.png'; //
+import '../../images/mui.png'; //
 import '../../images/nodeJs.png';
 import '../../images/numpy.png';
 import '../../images/pandas.png';
@@ -19,15 +18,8 @@ import '../../images/scipy.png';
 import '../../images/socketio.png';
 import '../../images/tensorFlow.png';
 
-export function TechUsed({ tech, width }) {
+export function TechUsed({ tech, width, location }) {
 	return (
-		// <div className="tech-used">
-		// 	<Box
-		// 		sx={{
-		// 			flexGrow: 1,
-		// 		}}
-		// 		id="project-gallery"
-		// 	>
 		<Grid container spacing={0}>
 			{tech.map((tech, index) => {
 				let logo = tech[1];
@@ -40,7 +32,5 @@ export function TechUsed({ tech, width }) {
 				);
 			})}
 		</Grid>
-		// 	</Box>
-		// </div>
 	);
 }

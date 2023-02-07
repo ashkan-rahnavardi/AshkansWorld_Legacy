@@ -15,9 +15,10 @@ export function TxtWithPopup({ info }) {
 	const showButton = () => {
 		if (info.image) {
 			return (
-				<IconButton onClick={handleClick} color="blue">
-					<PreviewIcon />
-				</IconButton>
+				<i className="fa-regular fa-image img-icon" onClick={handleClick}></i>
+				// <IconButton onClick={handleClick} color="blue">
+				// 	<PreviewIcon />
+				// </IconButton>
 			);
 		} else {
 			return <></>;
@@ -25,7 +26,7 @@ export function TxtWithPopup({ info }) {
 	};
 
 	return (
-		<div style={{ display: 'flex' }}>
+		<div className="txt-with-popup" style={{ display: 'flex' }}>
 			<Grid item xs={12} md={display ? 6 : 12}>
 				<p>
 					{info.text} {showButton()}
@@ -34,6 +35,7 @@ export function TxtWithPopup({ info }) {
 			<Grid item md={display ? 6 : 0}>
 				<div style={{ display: getDisplay() }}>
 					<img
+						className="img-popup"
 						src={info.image}
 						style={{ maxWidth: '100%' }}
 						onClick={() => setDisplay(false)}

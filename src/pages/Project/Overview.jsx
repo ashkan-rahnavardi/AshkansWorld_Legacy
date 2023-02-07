@@ -4,6 +4,9 @@ import React from 'react';
 import ImgTxtH from '../Components/ImgTxtH.jsx';
 import ImgTxtV from '../Components/ImgTxtV.jsx';
 
+import '../../images/bcitMap.png';
+import '../../images/sotby-context.png';
+
 export default function Overview({ project }) {
 	console.log(project.name);
 	return (
@@ -13,7 +16,10 @@ export default function Overview({ project }) {
 			}}
 			className="project-page overview"
 		>
-			<div className="project__banner" id={project.name + '-banner'}>
+			<div
+				className="project__banner overview__banner"
+				id={project.name + '-banner'}
+			>
 				<img
 					src={'/images/' + project.logo}
 					alt={project.name + ' logo'}

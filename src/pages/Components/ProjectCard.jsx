@@ -44,7 +44,11 @@ export default function ProjectCard({ project, index, navigate }) {
 						<Box sx={{ display: 'flex' }}>
 							<Grid item xs={6} md={6} className="project-card__tech-used">
 								<h2>Technologies Used</h2>
-								<TechUsed tech={project.Development.tech} width={6} />
+								<TechUsed
+									tech={project.Development.tech}
+									width={6}
+									location="project-card"
+								/>
 							</Grid>
 							<Grid item xs={6} md={6}>
 								<h2>Features</h2>

@@ -11,7 +11,7 @@ export default function RND({ project }) {
 			sx={{
 				flexGrow: 1,
 			}}
-			className="project-page"
+			className="project-page rnd"
 		>
 			<Grid container spacing={2}>
 				<Grid item xs={12} md={8}>
@@ -23,7 +23,7 @@ export default function RND({ project }) {
 				</Grid>
 				<Grid item xs={12} md={12}>
 					<h1>Technologies Used</h1>
-					<TechUsed tech={project.Development.tech} width={4} />
+					<TechUsed tech={project.Development.tech} width={4} location="rnd" />
 				</Grid>
 				<Grid item xs={12} md={12} className="challenges">
 					<h1>Challenges</h1>

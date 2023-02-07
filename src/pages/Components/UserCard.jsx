@@ -1,10 +1,13 @@
 import React from 'react';
 
+import '../../images/user1.jpeg';
+import '../../images/user2.jpg';
+
 export default function UserStories({ info }) {
 	return (
-		<div className="user-card" style={{ display: 'flex' }}>
+		<div className="user-card">
 			<div className="user">
-				<img src={info.image} className="user-image" />
+				<img src={'/images/' + info.image} className="user-image" />
 				<div className="user-info">
 					<p>Name: {info.name}</p>
 					<p>Age: {info.age}</p>

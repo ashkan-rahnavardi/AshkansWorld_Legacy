@@ -8,8 +8,6 @@ import AutoplayVideo from '../Components/AutoPlayVideo.jsx';
 // );
 
 export default function FinalDesign({ project }) {
-	console.log(project);
-
 	let content = (
 		<>
 			<UInFeatures info={project.FinalDesign} name={project.name} />
@@ -34,7 +32,7 @@ export default function FinalDesign({ project }) {
 			sx={{
 				flexGrow: 1,
 			}}
-			className="project-page"
+			className="project-page final-design"
 		>
 			<Grid container spacing={2}>
 				{content}
@@ -59,7 +57,9 @@ function Features({ info }) {
 			<h1>Features</h1>
 			<ul>
 				{info.features.map((feature, index) => (
-					<li key={index}>{feature}</li>
+					<li className="final-design__feature-item" key={index}>
+						{feature}
+					</li>
 				))}
 			</ul>
 		</Grid>
@@ -68,7 +68,7 @@ function Features({ info }) {
 
 function UI({ info }) {
 	return (
-		<Grid item xs={12} md={5}>
+		<Grid item xs={12} md={5} className="final-design__ui">
 			<h1>UI / UX</h1>
 			<p>{info.text}</p>
 			<p>{info.text2}</p>
@@ -80,7 +80,7 @@ function UInFeatures({ info, name }) {
 	return (
 		<Grid item xs={12} md={8}>
 			<div className="demo-text">
-				<div>
+				<div className="final-design__ui">
 					<h1>UI / UX</h1>
 					<p>{info.text}</p>
 					<p>{info.text2}</p>
@@ -89,7 +89,9 @@ function UInFeatures({ info, name }) {
 					<h1>Features</h1>
 					<ul>
 						{info.features.map((feature, index) => (
-							<li key={index}>{feature}</li>
+							<li className="final-design__feature-item" key={index}>
+								{feature}
+							</li>
 						))}
 					</ul>
 				</div>
