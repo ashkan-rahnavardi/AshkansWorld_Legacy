@@ -3,6 +3,7 @@
 body {
 	margin: 0;
 	height: 100%;
+	background-color: #f1f1f1;
 }
 
 .app {
@@ -19,7 +20,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	color: #2b2b2b;
 	font-size: large;
-	background-color: #f1f1f1;
+
 	min-height: calc(100vh - 80px);
 }
 

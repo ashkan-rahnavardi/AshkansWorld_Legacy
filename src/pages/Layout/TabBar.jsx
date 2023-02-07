@@ -23,7 +23,7 @@ export default function TabBar({ content, value, handleChange }) {
 			className="app__bar"
 			position="sticky"
 			style={{
-				background: '#F1F1F1',
+				background: '#EAEAEA',
 				boxShadow: 'none',
 				top: '0',
 				width: '100%',
