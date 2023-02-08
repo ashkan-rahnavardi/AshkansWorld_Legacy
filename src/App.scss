@@ -21,6 +21,7 @@ body {
 	color: #2b2b2b;
 	font-size: large;
 	max-width: 1080px;
+	font-synthesis: none;
 }
 
 .react-swipeable-view-container {
@@ -153,7 +154,7 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-	height: 100%;
+	height: max-content;
 }
 
 .project-card:hover {
@@ -162,8 +163,9 @@ h3 {
 
 .project-card__content {
 	height: 100%;
-	// font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #f4f0e8;
+	font-size: small;
 }
 
 .project-card__feature-item {

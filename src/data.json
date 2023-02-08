@@ -193,7 +193,7 @@
 	{
 		"name": "Hangado",
 		"logo": "HangadoLogo.png",
-		"description": "A web application that helps users organize and plan their hangouts.",
+		"description": "An instant messaging application designed to help people organize hangouts with their friends.",
 		"path": "projects/Hangado/",
 		"Overview": {
 			"Context": {
