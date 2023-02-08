@@ -100,15 +100,24 @@ export default function About() {
 			</Grid>
 			<div className="socials">
 				<div className="social-icons">
-					<a className="social-icon social-icon--github">
+					<a
+						className="social-icon social-icon--github"
+						href="https://github.com/ashkan-rahnavardi"
+					>
 						<i className="fa fa-github"></i>
 						<div className="tooltip">Github</div>
 					</a>
-					<a className="social-icon social-icon--instagram">
+					<a
+						className="social-icon social-icon--instagram"
+						href="https://www.instagram.com/ashnips/"
+					>
 						<i className="fa fa-instagram"></i>
 						<div className="tooltip">Instagram</div>
 					</a>
-					<a className="social-icon social-icon--linkedin">
+					<a
+						className="social-icon social-icon--linkedin"
+						href="https://www.linkedin.com/in/ashkan-rahnavardi/"
+					>
 						<i className="fa fa-linkedin"></i>
 						<div className="tooltip">LinkedIn</div>
 					</a>
