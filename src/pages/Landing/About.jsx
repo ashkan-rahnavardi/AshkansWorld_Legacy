@@ -7,37 +7,36 @@ import { CircularProgress } from './../Components/CircularProgress.jsx';
 import ashResumeDocx from '../../images/resumeV4.docx';
 import ashResumePdf from '../../images/resumeV4.pdf';
 
+import '../../images/c-plus.png';
+import '../../images/java.png';
+import '../../images/pytorch.png';
+import '../../images/sass.png';
+import '../../images/sql.png';
+
 export default function About() {
-	const skills = [
-		{
-			name: 'Hiking / Camping',
-			percent: 23,
-		},
-		{
-			name: 'Cooking',
-			percent: 19,
-		},
-		{
-			name: 'Reading',
-			percent: 14,
-		},
-		{
-			name: 'Running / Biking',
-			percent: 16,
-		},
-		{
-			name: 'Playing Guitar',
-			percent: 9,
-		},
-		{
-			name: 'Video Games',
-			percent: 15,
-		},
-		{
-			name: 'Watching Movies',
-			percent: 4,
-		},
-	];
+	const tech = {
+		machineLearning: [
+			['Tensor Flow', 'tensorFlow.png'],
+			['Numpy', 'numpy.png'],
+			['PyTorch', 'pytorch.png'],
+			['Keras', 'keras.png'],
+			['SciPy', 'scipy.png'],
+		],
+		webDev: [
+			['React', 'react.png'],
+			['Node JS', 'nodeJs.png'],
+			['Socket IO', 'socketio.png'],
+			['Mongo DB', 'mongodb.png'],
+			['Sass', 'sass.png'],
+		],
+		languages: [
+			['Python', 'python.png'],
+			['Java Script', 'javascript.png'],
+			['C++', 'c-plus.png'],
+			['Java', 'java.png'],
+			['SQL', 'sql.png'],
+		],
+	};
 
 	return (
 		<Box sx={{ flexGrow: 1 }} className="about-view">
@@ -59,8 +58,7 @@ export default function About() {
 						I have also had the opportunity to serve as a scrum master, which
 						has further honed my leadership and organizational abilities.
 					</p>
-					<p>If I'm not coding, then statistically you can find me:</p>
-					<CircularProgress skills={skills} />
+					<TechnicalSkills skills={tech} />
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<h1>My Assistant</h1>
@@ -118,4 +116,39 @@ export default function About() {
 			</div>
 		</Box>
 	);
+}
+
+function TechnicalSkills({ skills }) {
+	return (
+		<div className="about__technical-skills">
+			<h3 className="technical-skills-label">Technical skills:</h3>
+			<h4 className="technical-skills__category-label">Languages:</h4>
+			<div className="technical-skills__category">
+				<SkillsCategory skills={skills.languages} />
+			</div>
+			<h4 className="technical-skills__category-label">Machine Learning:</h4>
+			<div className="technical-skills__category">
+				<SkillsCategory skills={skills.machineLearning} />
+			</div>
+			<h4 className="technical-skills__category-label">Web Development:</h4>
+			<div className="technical-skills__category">
+				<SkillsCategory skills={skills.webDev} />
+			</div>
+		</div>
+	);
+}
+
+function SkillsCategory({ skills }) {
+	return skills.map((skill, index) => {
+		return (
+			<div className="skill" key={index}>
+				<img
+					src={'/images/' + skill[1]}
+					alt={skill[0]}
+					className="skill-icon"
+				/>
+				<p className="skill-label">{skill[0]}</p>
+			</div>
+		);
+	});
 }
