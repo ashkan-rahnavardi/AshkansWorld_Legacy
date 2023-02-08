@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-// @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 body {
 	margin: 0;
@@ -11,10 +11,6 @@ body {
 	display: flex;
 	justify-content: center;
 }
-
-// .app__content {
-// 	max-width: 1080px;
-// }
 
 .app__body {
 	font-family: 'Roboto', sans-serif;
@@ -35,17 +31,12 @@ h3 {
 }
 
 .app__bar {
-	width: 100vw;
 	background-color: #d3d3d3;
 }
 .app__bar__logo {
 	height: 45px;
 	padding-left: 0.5rem;
 }
-
-// .app__bar__tabs {
-// 	padding-top: 2rem;
-// }
 
 .app__bar__tabs__label {
 	font-family: 'Alegreya', serif;
@@ -66,11 +57,6 @@ h3 {
 	max-height: 8rem;
 	padding-top: 8rem;
 }
-
-// .home__text__haiku {
-// 	font-size: xx-large;
-// 	font-family: 'Tangerine', cursive;
-// }
 
 .about-view {
 	height: 100%;
@@ -102,14 +88,14 @@ h3 {
 	display: flex;
 	flex-direction: column;
 	font-size: small;
-	width: 50px;
+	width: 3rem;
 	padding-left: 2rem;
 	text-align: center;
 }
 
 .skill-icon {
-	width: 50px;
-	height: 50px;
+	width: 3rem;
+	height: 3rem;
 }
 
 .skill-label {
@@ -164,6 +150,7 @@ h3 {
 .project-card__content {
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 	background-color: #f4f0e8;
 	font-size: small;
 }
@@ -297,8 +284,9 @@ h3 {
 	margin: 0;
 }
 
-.user-points h4 {
-	margin: 0;
+.user-points__header {
+	font-style: oblique;
+	margin-bottom: 0;
 }
 
 .user-info {
@@ -350,6 +338,28 @@ h3 {
 	bottom: 0;
 }
 
+@media (prefers-color-scheme: dark) {
+	// body {
+	// 	background-color: black;
+	// }
+}
+
+@media only screen and (max-width: 1079px) {
+	.app__body {
+		width: 100vw;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#home__text__wave-emoji {
+		padding-top: 0rem;
+	}
+	.home-view {
+		padding-top: 2rem;
+		padding-left: 0;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.app__bar__tabs__label {
 		font-size: small;
@@ -361,9 +371,7 @@ h3 {
 		height: 30px;
 		padding-left: 0.25rem;
 	}
-	.app__body {
-		width: 100vw;
-	}
+
 	.home-view {
 		padding-top: 2rem;
 		padding-left: 0;
@@ -374,7 +382,6 @@ h3 {
 	}
 	#home__text__wave-emoji {
 		max-height: 5rem;
-		padding-top: 0rem;
 	}
 	.about__circular-progress {
 		padding-right: 0rem;

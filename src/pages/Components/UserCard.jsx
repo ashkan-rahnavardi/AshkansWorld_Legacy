@@ -17,7 +17,7 @@ export default function UserStories({ info }) {
 			<div className="user-points">
 				{info.points.map((point, index) => (
 					<div key={index}>
-						<h4>{point.title}</h4>
+						<h3 className="user-points__header">{point.title}</h3>
 						<ul className="bullet-points">
 							{point.points.map((aPoint, index) => (
 								<li key={index}>{aPoint}</li>

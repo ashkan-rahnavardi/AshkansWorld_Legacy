@@ -1,4 +1,5 @@
 import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
@@ -21,6 +22,11 @@ export default function App({}) {
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	const { pathname } = useLocation();
+	const [isDark, setIsDark] = useState(
+		useMediaQuery('(prefers-color-scheme: dark)')
+	);
+
+	console.log(isDark);
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
