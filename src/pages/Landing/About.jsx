@@ -4,8 +4,8 @@ import React from 'react';
 import pishi from '../../images/PishiHeadShotLow.jpg';
 import { CircularProgress } from './../Components/CircularProgress.jsx';
 
-import ashResumeDocx from '../../images/resumeV4.docx';
-import ashResumePdf from '../../images/resumeV4.pdf';
+import ashResumeDocx from '../../images/coding.docx';
+import ashResumePdf from '../../images/coding.pdf';
 
 import '../../images/c-plus.png';
 import '../../images/java.png';
