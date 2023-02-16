@@ -3,8 +3,8 @@ import Grid from '@mui/material/Grid';
 import React from 'react';
 import pishi from '../../images/PishiHeadShotLow.jpg';
 
-import ashResumeDocx from '../../images/coding.docx';
-import ashResumePdf from '../../images/coding.pdf';
+import ashResumeDocx from '../../images/resumeV4.docx';
+import ashResumePdf from '../../images/resumeV4.pdf';
 
 import '../../images/c-plus.png';
 import '../../images/java.png';
