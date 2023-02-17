@@ -16,7 +16,7 @@ function a11yProps(index) {
 	};
 }
 
-export default function TabBar({ content, value, handleChange }) {
+export default function TabBar({ content, value, handleChange, handleHome }) {
 	return (
 		<AppBar
 			className="app__bar"
@@ -29,7 +29,7 @@ export default function TabBar({ content, value, handleChange }) {
 		>
 			<Toolbar disableGutters>
 				<Link to="/" className="app__bar__logo">
-					<img src={AR} className="app__bar__logo" />
+					<img src={AR} className="app__bar__logo" onClick={handleHome} />
 				</Link>
 				<Tabs
 					className="app__bar__tabs"

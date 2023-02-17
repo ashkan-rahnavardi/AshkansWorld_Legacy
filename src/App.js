@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import React, { lazy, Suspense, useEffect, useState } from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import './App.scss';
 import './images/WayfindingLogo.png';
@@ -9,7 +9,6 @@ import About from './pages/Landing/About.jsx';
 import Home from './pages/Landing/Home.jsx';
 import Projects from './pages/Landing/Projects.jsx';
 import TabBar from './pages/Layout/TabBar.jsx';
-import TabView from './pages/Layout/TabView.jsx';
 import FinalDesign from './pages/Project/FinalDesign.jsx';
 import Overview from './pages/Project/Overview.jsx';
 import RND from './pages/Project/ResearchDevelopment.jsx';
@@ -19,7 +18,6 @@ const Wayfinding = data[0];
 const Sotby = data[1];
 
 export default function App({}) {
-	const navigate = useNavigate();
 	const [projects, setProjects] = useState(false);
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
@@ -27,6 +25,11 @@ export default function App({}) {
 	const [isDark, setIsDark] = useState(
 		useMediaQuery('(prefers-color-scheme: dark)')
 	);
+
+	const handleHome = () => {
+		setProjects(false);
+		console.log('ya');
+	};
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -37,11 +40,11 @@ export default function App({}) {
 	};
 
 	useEffect(() => {
-		if (window.location.href.includes('#projects')) {
+		setValue(0);
+		let endPath = window.location.href.slice(-2);
+		console.log('endPath', endPath);
+		if (projects && endPath === '/#') {
 			setValue(1);
-			console.log('yii');
-		} else {
-			setValue(0);
 		}
 	}, [pathname]);
 
@@ -59,7 +62,7 @@ export default function App({}) {
 		if (pathname.includes('projects')) {
 			return (
 				<a
-					href="/#projects"
+					href="/#"
 					style={{ display: 'inline-block', paddingLeft: '2rem' }}
 					onClick={() => {
 						setProjects(true);
@@ -74,7 +77,12 @@ export default function App({}) {
 	return (
 		<div className="app">
 			<div className="app__content">
-				<TabBar content={getTabs()} value={value} handleChange={handleChange} />
+				<TabBar
+					content={getTabs()}
+					value={value}
+					handleChange={handleChange}
+					setProjects={handleHome}
+				/>
 				<BackToProjects />
 				<Routes>
 					<Route
@@ -122,6 +130,21 @@ export default function App({}) {
 							</SwipeableViews>
 						}
 					/>
+					{/* <Route
+						path="*"
+						element={
+							<SwipeableViews
+								className="app__body"
+								axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+								index={value}
+								onChangeIndex={handleChangeIndex}
+							>
+								<Home />
+								<Projects />
+								<About />
+							</SwipeableViews>
+						}
+					/> */}
 				</Routes>
 			</div>
 		</div>
