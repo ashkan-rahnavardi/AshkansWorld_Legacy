@@ -1,7 +1,7 @@
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import React, { lazy, Suspense, useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import './App.scss';
 import './images/WayfindingLogo.png';
@@ -19,14 +19,14 @@ const Wayfinding = data[0];
 const Sotby = data[1];
 
 export default function App({}) {
+	const navigate = useNavigate();
+	const [projects, setProjects] = useState(false);
 	const theme = useTheme();
 	const [value, setValue] = useState(0);
 	const { pathname } = useLocation();
 	const [isDark, setIsDark] = useState(
 		useMediaQuery('(prefers-color-scheme: dark)')
 	);
-
-	console.log(isDark);
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
@@ -37,7 +37,12 @@ export default function App({}) {
 	};
 
 	useEffect(() => {
-		setValue(0);
+		if (window.location.href.includes('#projects')) {
+			setValue(1);
+			console.log('yii');
+		} else {
+			setValue(0);
+		}
 	}, [pathname]);
 
 	function getTabs() {
@@ -50,10 +55,27 @@ export default function App({}) {
 		return tabs;
 	}
 
+	function BackToProjects() {
+		if (pathname.includes('projects')) {
+			return (
+				<a
+					href="/#projects"
+					style={{ display: 'inline-block', paddingLeft: '2rem' }}
+					onClick={() => {
+						setProjects(true);
+					}}
+				>
+					Back to projects
+				</a>
+			);
+		}
+	}
+
 	return (
 		<div className="app">
 			<div className="app__content">
 				<TabBar content={getTabs()} value={value} handleChange={handleChange} />
+				<BackToProjects />
 				<Routes>
 					<Route
 						path="/"

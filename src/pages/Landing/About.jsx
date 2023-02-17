@@ -102,6 +102,7 @@ export default function About() {
 					<a
 						className="social-icon social-icon--github"
 						href="https://github.com/ashkan-rahnavardi"
+						target="_blank"
 					>
 						<i className="fa fa-github"></i>
 						<div className="tooltip">Github</div>
@@ -109,6 +110,7 @@ export default function About() {
 					<a
 						className="social-icon social-icon--instagram"
 						href="https://www.instagram.com/ashnips/"
+						target="_blank"
 					>
 						<i className="fa fa-instagram"></i>
 						<div className="tooltip">Instagram</div>
@@ -116,6 +118,7 @@ export default function About() {
 					<a
 						className="social-icon social-icon--linkedin"
 						href="https://www.linkedin.com/in/ashkan-rahnavardi/"
+						target="_blank"
 					>
 						<i className="fa fa-linkedin"></i>
 						<div className="tooltip">LinkedIn</div>
