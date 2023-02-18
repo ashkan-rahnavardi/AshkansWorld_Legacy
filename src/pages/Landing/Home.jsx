@@ -9,13 +9,13 @@ export default function Home({}) {
 			<Grid item xs={12} md={6} className="home__text">
 				<img src={wave} id="home__text__wave-emoji"></img>
 				<h1>Howdy! I am Ashkan Rahnavardi</h1>
-				<p className="home__text__haiku">
+				{/* <p className="home__text__haiku">
 					Code, a work of art,
 					<br />
 					Pleasure, a skill honed with care
 					<br />
 					Balance in all things.
-				</p>
+				</p> */}
 			</Grid>
 			<Grid item xs={12} md={6}>
 				<div style={{ display: 'flex', justifyContent: 'center' }}>
