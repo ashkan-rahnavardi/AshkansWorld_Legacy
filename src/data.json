@@ -13,12 +13,12 @@
 			},
 			"Scope": {
 				"title": "Scope",
-				"text": "This was an academic project during my last semester at BCIT. I was working with a team of 2 other students, and we were given 3 weeks to develop the project from the ground up.",
-				"text2": "Due to the limited resources and time, we decided to not include building interiors, and to instead focus on exterior foot paths and amenities."
+				"text": "This project was developed as a proof of concept wayfinding application for the BCIT Burnaby campus. My team consisted of myself and two other students, and we were given 4 x 1 week sprints for development.",
+				"text2": "The main focus of the project was developing a way to get accurate foot path data from the campus, and creating a frontend which would use this data to show the shortest path between any two given points. "
 			},
 			"Objective": {
 				"title": "Objective",
-				"text": "The goal of this project was to create a proof of concept wayfinding mobile application for the BCIT Burnaby campus. The application would be able to geolocate the user on the campus, and provide them with directions to their destination."
+				"text": "The goal of this project was to create a MVP wayfinding mobile application for the BCIT Burnaby campus. The application would be able to geolocate the user on the campus, and provide them with directions to their destination."
 			}
 		},
 		"Development": {
