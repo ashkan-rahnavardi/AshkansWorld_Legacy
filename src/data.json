@@ -102,8 +102,8 @@
 		"Overview": {
 			"Context": {
 				"title": "Context",
-				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage vacations, resources and schedules, which led to a lof of confusion and inefficiency.",
-				"text2": "Only one person could edit the file at a time, and there was no way to track changes. Due to the lack of error control, if an error was made in the file it would be difficult to find and fix ",
+				"text": "The faculty of BCIT's Automotive Department were using a shared google file to manage vacations, resources and schedules, which led to a lot of confusion and inefficiency.",
+				"text2": "Only one person could edit the file at a time, and there was no way to track changes. Due to the lack of error control, if an error was made in the file it would be difficult to find and fix.",
 				"image": "sotby-context.png"
 			},
 			"Scope": {
