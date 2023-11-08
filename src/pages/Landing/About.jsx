@@ -137,13 +137,13 @@ function TechnicalSkills({ skills }) {
 			<div className="technical-skills__category">
 				<SkillsCategory skills={skills.languages} />
 			</div>
-			<h4 className="technical-skills__category-label">Machine Learning:</h4>
-			<div className="technical-skills__category">
-				<SkillsCategory skills={skills.machineLearning} />
-			</div>
 			<h4 className="technical-skills__category-label">Web Development:</h4>
 			<div className="technical-skills__category">
 				<SkillsCategory skills={skills.webDev} />
+			</div>
+			<h4 className="technical-skills__category-label">Machine Learning:</h4>
+			<div className="technical-skills__category">
+				<SkillsCategory skills={skills.machineLearning} />
 			</div>
 		</div>
 	);
