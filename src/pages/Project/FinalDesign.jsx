@@ -45,8 +45,8 @@ function NextSteps({ info }) {
 	return (
 		<Grid item xs={12} md={6}>
 			<h1>Next Steps</h1>
-			<p>{info.nextStep}</p>
-			<p>{info.nextStep2}</p>
+			<p>&nbsp; {info.nextStep}</p>
+			<p>&nbsp; {info.nextStep2}</p>
 		</Grid>
 	);
 }
@@ -70,8 +70,8 @@ function UI({ info }) {
 	return (
 		<Grid item xs={12} md={5} className="final-design__ui">
 			<h1>UI / UX</h1>
-			<p>{info.text}</p>
-			<p>{info.text2}</p>
+			<p>&nbsp; {info.text}</p>
+			<p>&nbsp; {info.text2}</p>
 		</Grid>
 	);
 }
@@ -82,8 +82,8 @@ function UInFeatures({ info, name }) {
 			<div className="demo-text">
 				<div className="final-design__ui">
 					<h1>UI / UX</h1>
-					<p>{info.text}</p>
-					<p>{info.text2}</p>
+					<p>&nbsp; {info.text}</p>
+					<p>&nbsp; {info.text2}</p>
 				</div>
 				<div>
 					<h1>Features</h1>
@@ -97,8 +97,8 @@ function UInFeatures({ info, name }) {
 				</div>
 				<div>
 					<h1>Next Steps</h1>
-					<p>{info.nextStep}</p>
-					<p>{info.nextStep2}</p>
+					<p>&nbsp; {info.nextStep}</p>
+					<p>&nbsp; {info.nextStep2}</p>
 				</div>
 			</div>
 		</Grid>

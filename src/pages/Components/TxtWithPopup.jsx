@@ -29,7 +29,7 @@ export function TxtWithPopup({ info }) {
 		<div className="txt-with-popup" style={{ display: 'flex' }}>
 			<Grid item xs={12} md={display ? 6 : 12}>
 				<p>
-					{info.text} {showButton()}
+					&nbsp; {info.text} {showButton()}
 				</p>
 			</Grid>
 			<Grid item md={display ? 6 : 0}>

@@ -43,34 +43,41 @@ export default function About() {
 				<Grid item xs={12} md={6}>
 					<h1>My Story</h1>
 					<p>
-						I'm Ashkan, a recent BCIT graduate with a passion for technology,
-						innovation and problem solving.
+						&nbsp; Expanding on my foundation in Biology and Psychology, my
+						research and analytical abilities empower me to excel as a versatile
+						and resourceful developer. Complementing this, my sales experience
+						further honed my proficiency in communication and cultivated my
+						adeptness in time and stress management.
 					</p>
 					<p>
-						During my studies I specialized in machine learning and predictive
-						analytics, where I learned how to harness the power of data to solve
-						real world problems.
+						&nbsp; For my initial industry project, I played a pivotal role in
+						the design and development of a scheduling and resource management
+						application for the BCIT Automotive Department. In my subsequent
+						project, I co-developed a prototype navigation application for the
+						BCIT Burnaby campus and had the privilege of presenting this project
+						to an audience of industry professionals at the 'Digital
+						Transformation / Digital Twin Summit'.
 					</p>
-					<p>
+					{/* <p>
 						Having had the privilege of working on various projects with diverse
 						teams has allowed me to grow as a professional and learn new skills.
 						I have also had the opportunity to serve as a scrum master, which
 						has further honed my leadership and organizational abilities.
-					</p>
+					</p> */}
 					<TechnicalSkills skills={tech} />
 				</Grid>
 				<Grid item xs={12} md={6}>
 					<h1>My Assistant</h1>
 					<p>
-						I would not have been able to accomplish all that I have without the
-						help of my assistant, Pishi.
+						&nbsp; I would not have been able to accomplish all that I have
+						without the help of my assistant, Pishi.
 					</p>
 					<img src={pishi} alt="Pishi" className="pishi" />
 
 					<h1>Resume</h1>
 					<p>
-						If you would like to know more about my background my resume is
-						available for download below.
+						&nbsp; If you would like to know more about my background my resume
+						is available for download below.
 					</p>
 					<div
 						style={{
@@ -89,9 +96,10 @@ export default function About() {
 
 					<h1>Get in Touch</h1>
 					<p>
-						I am always looking for new opportunities to learn and grow. If you
-						are interested in working together, please feel free to contact me
-						via <a href="mailto:ashkan.rahnavardi@gmail.com">Email</a> or{' '}
+						&nbsp; I am always looking for new opportunities to learn and grow.
+						If you are interested in working together, please feel free to
+						contact me via{' '}
+						<a href="mailto:ashkan.rahnavardi@gmail.com">Email</a> or{' '}
 						<a href="https://www.linkedin.com/in/ashkan-rahnavardi">LinkedIn</a>
 						.
 					</p>

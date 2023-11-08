@@ -10,8 +10,8 @@ export default function ImgTxtH({ info }) {
 		<>
 			<Grid item xs={12} md={wide ? 12 : 6} className={'txt' + info.title}>
 				<h1 className={info.title + '-header'}>{info.title}</h1>
-				<p>{info.text}</p>
-				<p>{info.text2}</p>
+				<p>&nbsp; {info.text}</p>
+				<p>&nbsp; {info.text2}</p>
 			</Grid>
 			<Grid item xs={12} md={wide ? 12 : 6} className={'img' + info.title}>
 				<img

@@ -39,8 +39,8 @@ function TextBox({ info }) {
 	return (
 		<Grid item xs={12} md={12}>
 			<h1>{info.title}</h1>
-			<p>{info.text}</p>
-			<p>{info.text2}</p>
+			<p>&nbsp; {info.text}</p>
+			<p>&nbsp; {info.text2}</p>
 		</Grid>
 	);
 }
