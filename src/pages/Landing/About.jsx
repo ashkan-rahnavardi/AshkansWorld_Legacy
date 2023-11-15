@@ -3,8 +3,7 @@ import Grid from '@mui/material/Grid';
 import React from 'react';
 import pishi from '../../images/PishiHeadShotLow.jpg';
 
-import ashResumeDocx from '../../images/resumeV4.docx';
-import ashResumePdf from '../../images/resumeV4.pdf';
+import ashResumePdf from '../../images/resume.pdf';
 
 import '../../images/c-plus.png';
 import '../../images/java.png';
@@ -89,9 +88,9 @@ export default function About() {
 						<a href={ashResumePdf} download="Ashkan_Rahnavardi_Resume.pdf">
 							<button className="download-button">Download pdf</button>
 						</a>
-						<a href={ashResumeDocx} download="Ashkan_Rahnavardi_Resume.docx">
+						{/* <a href={ashResumeDocx} download="Ashkan_Rahnavardi_Resume.docx">
 							<button className="download-button">Download docx</button>
-						</a>
+						</a> */}
 					</div>
 
 					<h1>Get in Touch</h1>
