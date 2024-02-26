@@ -1,5 +1,5 @@
 # First iteration of AshkansWorld
-___
+
 ## About
 
 This was my first attempt at making my own portfolio website. I created my own boilerplate to deepen my understanding of web serving processes and to avoid the bloat associated with 'create-react-app'.
